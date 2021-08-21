@@ -1,0 +1,22 @@
+
+/*
+li        { counter-increment: foo;
+            list-style: none; }
+li p      { display: inline; }
+li:before { display: inline;
+            content: counter(foo) '.\0000a0';
+            color: #f33978; }
+  font-variant-ligatures: none;
+*/
+
+table { width: 100%; }
+
+.dice {
+  font-family: "Dicier";
+  font-variant-ligatures: normal;
+  font-variant-ligatures: common-ligatures;           /* <common-lig-values>; alt: no-common-ligatures; */
+  font-variant-ligatures: discretionary-ligatures;    /* <discretionary-lig-values>; alt: no-discretionary-ligatures; */
+  font-variant-ligatures: historical-ligatures;       /* <historical-lig-values>; alt: no-historical-ligatures; */
+  font-variant-ligatures: contextual;                 /* <contextual-alt-values>; alt: no-contextual; */
+}
+
