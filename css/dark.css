@@ -1,0 +1,31 @@
+/* highlight color options:
+ * #c7254e (from Pandoc website)
+ * #E063DA
+ * #f33978 (darker) */
+
+@font-face { font-family: 'GrandeeCP';
+             src: url('grandeecp.otf') format('truetype'),
+                  url('grandeecp.woff') format('woff');
+             font-weight: normal;
+             font-style: normal; }
+
+body { color: #fffff8;
+       background: #2d3335;
+       max-width: 55em;
+       margin: auto; }
+
+h2, h3, hr { color: #f33978;
+             border-top: 1px solid #f33978; }
+
+a { color: #f33978;
+    font-weight: bold; }
+
+h1, h2, h3 { font-family: "GrandeeCP"; }
+
+table { margin: 1em; }
+
+thead th { border-bottom: 1px solid #f33978; }
+table > tbody > tr.divider > td { padding-bottom: 5px;
+                                  border-bottom: 1px solid #f33978; }
+
+q { quotes: "‘" "’" "“" "”"; }
