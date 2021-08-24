@@ -10,7 +10,7 @@
     <link>https://taminhlam.github.io/boxplot.html</link>
     <guid>https://taminhlam.github.io/boxplot.html</guid>
     <pubDate>Tue Aug 24 14:41:28 +07 2021</pubDate>
-    <description></description>
+    <description>foo</description>
     <description><![CDATA[I like boxplots. So I want to be able to produce some quickly from whatever data I’m interested in. As an example, as a “recipe”, with <code>gnuplot</code>.]]></description>
     <content:encoded><![CDATA[<p>For this example, some grades – collected over a term from a fixed set of students – are used here. This dataset is small but has some “nice”, realistic features: there are gaps (e.g. some students were absent the day of a given test), … and I happen to know it well to notice if something goes terribly wrong with the vizualization.</p>
 <h2 id="colors">Colors</h2>
