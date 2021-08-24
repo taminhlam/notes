@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Notes</title>
+  <link>https://taminhlam.github.io/notes</link>
+  <description>Notes</description>
+  <item>
+    <title>Example boxplots</title>
+    <dc:creator>
+      <![CDATA[...]]>
+    </dc:creator>
+    <link>https://taminhlam.github.io/boxplot.html</link>
+    <guid>https://taminhlam.github.io/boxplot.html</guid>
+    <pubDate>Tue Aug 24 14:41:28 +07 2021</pubDate>
+    <description></description>
+    <description><![CDATA[I like boxplots. So I want to be able to produce some quickly from whatever data I’m interested in. As an example, as a “recipe”, with <code>gnuplot</code>.]]></description>
+    <content:encoded><![CDATA[<p>For this example, some grades – collected over a term from a fixed set of students – are used here. This dataset is small but has some “nice”, realistic features: there are gaps (e.g. some students were absent the day of a given test), … and I happen to know it well to notice if something goes terribly wrong with the vizualization.</p>
+<h2 id="colors">Colors</h2>
+<p>It seems that <em>gnuplot</em> comes with <em>podo</em> as its default set of color. <em>Podo</em> is supposed to remain legible for color-blind people and it doesn’t look too bad to me.</p>
+<pre><code># This seems unnecessary since *podo* should be the default
+# &quot;podo&quot; sets colors friendly to color blind individual
+set colorsequence podo</code></pre>
+<p>Still, assuming that you want different colors, let’s try to use <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">Viridis</a>. The gnuplot version is available, among many others, from <a href="http://www.gnuplotting.org">gnuplotting.org</a> <a href="https://github.com/Gnuplotting/gnuplot-palettes">palettes</a>. Once downloaded into the current directory, the <em>palette</em> can be loaded like so:</p>
+<pre><code>load &#39;viridis.pal&#39;</code></pre>
+<p>But that’s not sufficient to work “out of the box”. So let’s try to take things apart and extract the minimum bit that works for our case. The short list below is copied from the file <code>viridis.pal</code>:</p>
+<pre><code># viridis
+# lt: linetype
+# lc: linecolor
+
+# set style line 1 lt 1 lc rgb &#39;#440154&#39; # dark purple
+# set style line 2 lt 1 lc rgb &#39;#472c7a&#39; # purple
+# set style line 3 lt 1 lc rgb &#39;#3b518b&#39; # blue
+# set style line 4 lt 1 lc rgb &#39;#2c718e&#39; # blue
+# set style line 5 lt 1 lc rgb &#39;#21908d&#39; # blue-green
+# set style line 6 lt 1 lc rgb &#39;#27ad81&#39; # green
+# set style line 7 lt 1 lc rgb &#39;#5cc863&#39; # green
+# set style line 8 lt 1 lc rgb &#39;#aadc32&#39; # lime green
+# set style line 9 lt 1 lc rgb &#39;#fde725&#39; # yellow</code></pre>
+<p>That doesn’t seem to work for boxplots. So after looking at other examples, I reformatted it as follow:</p>
+<pre class="viridis-short"><code># reformatted viridis short sequence into one working for boxplots ...
+# lt: linetype
+# lc: linecolor
+# lw: linewidth
+
+set lt 1 lc rgb &#39;#440154&#39; lw 1 # dark purple
+set lt 2 lc rgb &#39;#472c7a&#39; lw 1 # purple
+set lt 3 lc rgb &#39;#3b518b&#39; lw 1 # blue
+set lt 4 lc rgb &#39;#2c718e&#39; lw 1 # blue
+set lt 5 lc rgb &#39;#21908d&#39; lw 1 # blue-green
+set lt 6 lc rgb &#39;#27ad81&#39; lw 1 # green
+set lt 7 lc rgb &#39;#5cc863&#39; lw 1 # green
+set lt 8 lc rgb &#39;#aadc32&#39; lw 1 # lime green
+set lt 9 lc rgb &#39;#fde725&#39; lw 1 # yellow
+
+set linetype cycle 9</code></pre>
+<p><code>gnuplot</code> neither hangs nor throws specific errors of the <code>cycle</code> value differs from the number of <code>lt</code> defined …</p>
+<h2 id="terminal">Terminal</h2>
+<pre class="terminal"><code>## output straight into terminal
+#set terminal dumb
+
+## output a png image (with colors, etc ...)
+#set terminal pngcairo font &quot;arial,10&quot; size 2500,500
+#set term png transparent truecolor
+#set term pngcairo transparent
+set terminal png size 2500,500</code></pre>
+<h2 id="boxplot-settings">Boxplot settings</h2>
+<pre class="settings"><code>set style fill solid 0.25 border -1
+set style boxplot outliers pointtype 7
+set style data boxplot
+set boxwidth 0.7 absolute</code></pre>
+<h2 id="plot">Plot</h2>
+<pre class="boxplot.gp"><code>@{viridis-short}
+@{terminal}
+@{settings}
+
+#set key font &quot;/home/lam/Dropbox/playgrounds/gnuplot/gradeviz/lemon.ttf&quot;
+set key font &quot;lemon&quot;
+set output &quot;boxplot.png&quot;;
+
+set key below
+
+#set title &#39;grades&#39; font &quot;lemon,14&quot;
+unset title
+#grades go from 0 to 10, but we add some margins for readability
+set yrange [-1:11]
+set xtics 1,1,91 scale 0
+#`gradecolumnizer.awk` uses tabs as separator to format data
+set datafile separator &#39;\t&#39;
+plot for [i=1:91] &#39;grades.dat&#39; using (i):i title &quot;&quot;.(i).&quot;: &quot;.columnhead(i)</code></pre>
+<p>NB: errors on run because some students have no nickname, so gnuplot cannot label all boxplots.</p>
+<p>The result looks like this:</p>
+<figure>
+<img src="boxplot.png" class="centered" alt="results" /><figcaption aria-hidden="true">results</figcaption>
+</figure>]]></content:encoded>
+  </item>
+</channel>
+
+</rss>
