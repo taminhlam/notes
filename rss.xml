@@ -1,18 +1,28 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<rss version="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
 <channel>
 <title>Notes</title>
 <link>https://taminhlam.github.io/notes</link>
 <description>Notes</description>
-<pubDate>Tue, 24 Aug 2021 17:34:06 +0700</pubDate>
+<pubDate>Tue, 24 Aug 2021 17:40:07 +0700</pubDate>
   <item>
     <title>Example boxplots</title>
     <link>https://taminhlam.github.io/boxplot.html</link>
     <guid>https://taminhlam.github.io/boxplot.html</guid>
-    <pubDate>Tue, 24 Aug 2021 17:34:06 +0700</pubDate>
+    <pubDate>Tue, 24 Aug 2021 17:40:07 +0700</pubDate>
     
-    <description><![CDATA[I like boxplots. So I want to be able to produce some quickly from whatever data I’m interested in. As an example, as a “recipe”, with <code>gnuplot</code>.]]></description>
-    <content:encoded><![CDATA[<p>For this example, some grades – collected over a term from a fixed set of students – are used here. This dataset is small but has some “nice”, realistic features: there are gaps (e.g. some students were absent the day of a given test), … and I happen to know it well to notice if something goes terribly wrong with the vizualization.</p>
+    <description>
+      <![CDATA[I like boxplots. So I want to be able to produce some quickly from whatever data I’m interested in. As an example, as a “recipe”, with <code>gnuplot</code>.]]>
+      </description>
+    <content:encoded>
+      <![CDATA[<p>For this example, some grades – collected over a term from a fixed set of students – are used here. This dataset is small but has some “nice”, realistic features: there are gaps (e.g. some students were absent the day of a given test), … and I happen to know it well to notice if something goes terribly wrong with the vizualization.</p>
 <h2 id="colors">Colors</h2>
 <p>It seems that <em>gnuplot</em> comes with <em>podo</em> as its default set of color. <em>Podo</em> is supposed to remain legible for color-blind people and it doesn’t look too bad to me.</p>
 <pre><code># This seems unnecessary since *podo* should be the default
@@ -89,7 +99,8 @@ plot for [i=1:91] &#39;grades.dat&#39; using (i):i title &quot;&quot;.(i).&quot;
 <p>The result looks like this:</p>
 <figure>
 <img src="boxplot.png" class="centered" alt="results" /><figcaption aria-hidden="true">results</figcaption>
-</figure>]]></content:encoded>
+</figure>]]>
+    </content:encoded>
   </item>
 </channel>
 </rss>
