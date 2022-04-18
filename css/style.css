@@ -109,11 +109,54 @@
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 */
 
+
+/*
+https://fabiensanglard.net/
+
+    img.pixel, canvas.pixel {
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+
+    blockquote {
+    background-color: #f3f3f3;
+    border: dashed 1px grey;
+    width: 97.5%;
+    font-style: italic;
+    text-align: justify;
+
+    padding: 1ch;
+    padding-top: 2ch;
+    padding-bottom: 2ch;
+
+    margin : 0ch;
+    margin-bottom: 2ch;
+    margin-top: 0ch;
+  }
+
+  blockquote div {
+    text-transform: none;
+    text-align: right;
+    width: 100%;
+  }
+*/
+
+
+
+
+
+
 /* highlight color options:
  * #c7254e (from Pandoc website)
  * #E063DA
  * #c51d4a (raspberry pi)
  * #f33978 (darker) */
+/*
+body {  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                    Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+                    "Helvetica Neue", sans-serif; }
+*/
 
 @font-face { font-family: 'GrandeeCP';
              src: url('../fonts/grandeecp.otf') format('truetype'),
@@ -132,12 +175,6 @@ html {  line-height: 1.3;
         background: #fffff8; /* #fdfdfd */
         color: #111111; }
 
-/*
-body {  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                    Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-                    "Helvetica Neue", sans-serif; }
-*/
-
 body { width: 90%;
        max-width: 45em;
        font-family: sans-serif;
@@ -148,8 +185,9 @@ a { color: #111;
 
 /*
 h1, h2, h3 { font-family: "Eczar"; }
-q { quotes: "“" "”" "‘" "’" ; }
+q { quotes: "« " " »" "‘" "’" ; }
 */
+q { quotes: auto ; }
 h1, h2, h3  { font-family: "GrandeeCP"; }
 h2, h3      { margin-top: 2.5em; }
 h2          { border-top: 1px solid #c51d4a; }
@@ -162,6 +200,8 @@ table { margin: 1em; }
 thead th { border-bottom: 1px solid #c51d4a; }
 table > tbody > tr.divider > td { padding-bottom: 5px;
                                   border-bottom: 1px solid #c51d4a; }
+
+th, td { padding: 10px 20px; }
 
 blockquote { font-style: italic; }
 
@@ -179,9 +219,9 @@ p.date, p.author {  margin-top: -1em;
 dl  { border-top: 1px solid black;
       padding: 1em; }
 
-time, dt span { color: gray; }
+time, dt span, dd.tags, dd.author { color: gray; }
 
-img { max-width: 90vw; }
+figure, img { max-width: 90vw; }
 
 .centered { left: 50%;
             transform: translateX(-50%);
@@ -190,6 +230,11 @@ img { max-width: 90vw; }
             margin: auto;
             display: block; }
 */
+
+/*
+span.underline{text-decoration: underline;}
+*/
+span.underline{ background: rgba(0, 0, 0, 0) linear-gradient(transparent 60%, rgb(255, 206, 219) 0%) repeat scroll 0% 0%; }
 
 header {  display: flex;
           flex-flow: row wrap; }
@@ -219,4 +264,8 @@ sup   { vertical-align: top;
 @media all and (max-width: 800px) {
   header    { flex-direction: column; }
   header ul { flex-grow: 1; }
+}
+
+@media print {
+  a:after { content: "("attr(href)")"; }
 }
