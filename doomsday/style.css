@@ -1,2 +1,3 @@
 q { quotes: "‘" "’" ; }
 th, td { padding: inherit; }
+table { float: right; }
