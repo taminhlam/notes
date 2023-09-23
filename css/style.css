@@ -138,19 +138,6 @@ details { border: 1px solid gray;
   header ul { flex-grow:      1; }
 }
 
-@media all and (min-width: 1200px) {
-  aside { float:          right;
-  	      clear:          right;
-  	      margin-right:   -60%;
-  	      width:          50%;
-  	      margin-top:     0.3rem;
-  	      margin-bottom:  0px;
-  	      font-size:      0.8rem;
-  	      line-height:    1.3;
-  	      vertical-align: baseline;
-  	      position:       relative; }
-}
-
 @media print {
   a:after { content: "("attr(href)")"; }
 }
