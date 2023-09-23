@@ -118,7 +118,6 @@ aside { color:        gray;
 details { border: 1px solid gray;
           padding: 0.5em;
           color: gray;
-          line-height: .5em;
           border-radius: 5px;
           font-size: smaller; }
 
