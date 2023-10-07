@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Bungee';
-  src: url('assets/fonts/BungeeOutline-Regular.ttf') format('truetype');
+  src: url('fonts/BungeeOutline-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Bungee Hairline';
-  src: url('assets/fonts/BungeeHairline-Regular.ttf') format('truetype');
+  src: url('fonts/BungeeHairline-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
