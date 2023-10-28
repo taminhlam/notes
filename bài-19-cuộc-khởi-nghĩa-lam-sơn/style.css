@@ -1,0 +1,27 @@
+
+@font-face {
+   font-family: VNCharter;
+   font-style: normal;
+   font-weight: normal;
+   src:url("../fonts/VNcharter/VnCharter.ttf");
+}
+@font-face {
+   font-family: VNCharter;
+   font-style: normal;
+   font-weight: bold;
+   src:url("../fonts/VNcharter/VnCharter-Bold.ttf");
+}
+@font-face {
+   font-family: VNCharter;
+   font-style: italic;
+   font-weight: normal;
+   src:url("../fonts/VNcharter/VnCharter-Italic.ttf");
+}
+@font-face {
+   font-family: VNCharter;
+   font-style: italic;
+   font-weight: bold;
+   src:url("VNcharter/VnCharter-BoldItalic.ttf");
+}
+/* body { font-family: "VNCharter"; } */
+h1, h2, h3 { font-family: "VNCharter"; }
