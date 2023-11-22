@@ -62,8 +62,14 @@ dl  { border-top: 1px solid black;
       padding:    1em; }
 
 time, dt span, dd.tags, dd.author { color: gray; }
+/* 2023-11-22: fix centering */
+figure {  display:        inline-block;
+          align-content:  center;
+          max-width:      700px;
+          margin:         auto; }
 
-figure, img           { max-width:  90vw; }
+figure, img { max-width:  90vw; }
+
 /* https://techstacker.com/full-screen-width-images-only-css/ */
 figure.full, img.full { position:     relative;
                         left:         50%;
