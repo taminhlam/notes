@@ -5,9 +5,9 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Tạ Minh Lâm" />
-  <meta name="dcterms.date" content="2025-02-16" />
+  <meta name="dcterms.date" content="2025-02-15" />
   <meta name="dcterms.modified" content="2025-02-16" />
-  <title>Notes en vrac sur une génération de séquence (pseudo-)aléatoire</title>
+  <title>Reprise de notes en vrac sur une génération de séquence (pseudo-)aléatoire</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -32,13 +32,13 @@ aside { margin-top: 1em; }
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Notes en vrac sur une génération de séquence
-(pseudo-)aléatoire</h1>
+<h1 class="title">Reprise de notes en vrac sur une génération de
+séquence (pseudo-)aléatoire</h1>
 </header>
 <aside>
 <ul>
   <li>par: <span class="author">Tạ Minh Lâm</span></li>
-  <li>le: <time datetime="2025-02-16">2025-02-16</time></li>
+  <li>le: <time datetime="2025-02-15">2025-02-15</time></li>
   <li>modifié le: <time datetime="2025-02-16">2025-02-16</time></li>
 </ul>
 </aside>
@@ -278,6 +278,13 @@ résultat pour chaque série de symboles. Par exemple :</p></li>
 système de carte permet aussi de tirer le jeu dans la direction de “tout
 avec des cartes” (et un jeu avec peu de types de composants parait sans
 doute souvent plus “simple”, approchable).</p>
+<p>Il est à noter que ce systeme pourrait être compacté pour loger en
+marge des cartes courantes du jeu. Quelque chose comme …</p>
+<figure>
+<img src="cartes/exemple-carte.png" style="width: 20rem;"
+alt="exemple de carte" />
+<figcaption aria-hidden="true">exemple de carte</figcaption>
+</figure>
 <ul>
 <li><p>Une autre approche serait d’utiliser une jauge cyclique de 1 à 12
 (un cadran d’horloge) avec un ou plusieurs <em>“exploding dice”</em>
@@ -296,7 +303,12 @@ de chances d’évoluer beaucoup, mais a une chance non-nulle de bondir
 radicalement vers le pire (ici associé à la valeur 6 et la couleur
 rouge).</p></li>
 </ul>
-<p><img src="jauge/wheel.alt2.png" /></p>
+<figure>
+<img src="jauge/wheel.alt2.png" style="width: 20rem;"
+alt="Si on depasse 12, on retombe à 1 …" />
+<figcaption aria-hidden="true">Si on depasse 12, on retombe à 1
+…</figcaption>
+</figure>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
