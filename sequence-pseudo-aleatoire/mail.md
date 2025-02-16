@@ -1,7 +1,7 @@
 
 ---
-title: Notes en vrac sur une génération de séquence (pseudo-)aléatoire
-date: 2025-02-16
+title: Reprise de notes en vrac sur une génération de séquence (pseudo-)aléatoire
+date: 2025-02-15
 modified: 2025-02-16
 author: Tạ Minh Lâm
 css: simple.min.css
@@ -176,6 +176,10 @@ On vise, plus abstraitement, à établir une méthode de sélection aléatoire.
   Après avoir tiré ces 3 cartes, on obtient la séquence ♥️, ♠️, ⭐.
   Ce système de carte permet aussi de tirer le jeu dans la direction de "tout avec des cartes" (et un jeu avec peu de types de composants parait sans doute souvent plus "simple", approchable).
 
+  Il est à noter que ce systeme pourrait être compacté pour loger en marge des cartes courantes du jeu. Quelque chose comme ...
+  
+  ![exemple de carte](cartes/exemple-carte.png){style="width: 20rem;"}
+
 - Une autre approche serait d'utiliser une jauge cyclique de 1 à 12 (un cadran d'horloge) avec un ou plusieurs *"exploding dice"* (dont les valeurs minimale et/ou maximale ne sont pas fixes, mais dont les extrêmes sont progressivement statistiquement de moins en moins probables). La propriété d'être "explosif" pourrait être couplée à celle de d'avoir des valeurs négatives et positives[^pink].
 
    e.g. un dé à six faces marqué "-3", "-2", "-1", "1", "2", "3".
@@ -183,6 +187,6 @@ On vise, plus abstraitement, à établir une méthode de sélection aléatoire.
 
    L'état initial (qu'on assume ici être plutôt neutre ou positif pour les joueurs, et associé à la valeur 1 et la couleur verte) a ainsi peu de chances d'évoluer beaucoup, mais a une chance non-nulle de bondir radicalement vers le pire (ici associé à la valeur 6 et la couleur rouge).
 
-![](jauge/wheel.alt2.png)
+![Si on depasse 12, on retombe à 1 ...](jauge/wheel.alt2.png){style="width: 20rem;"}
 
 [^pink]: Plus abstraitement, on veut produire du "bruit rose". Voir à ce sujet le [speech de Geoff Engelstein (~30min, YouTube)](https://www.youtube.com/watch?v=qXn3tGBztVc).
