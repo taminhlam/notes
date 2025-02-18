@@ -119,6 +119,7 @@ On vise, plus abstraitement, à établir une méthode de sélection aléatoire.
   Donc un total de 8 × 6 = 48 pérmutations ... beaucoup trop par rapport aux 12 séquences requises.
 -->
 
+
 - Une solution élégante serait d'utiliser trois "dés" distincts:
 
   - un marqué ♥️, ♥️, ♥️, ♦️, ♦️, ♦️
@@ -132,7 +133,7 @@ On vise, plus abstraitement, à établir une méthode de sélection aléatoire.
   - d'aller pécher le bon dés parmis les trois avant le lancer, ...
   - soit de lancer n'importe lequel et de reordonner les résultats après le 3e lancé.
 
-  Si les dés ne sont pas ordonnés, on a bien 12 *combinaisons*  (i.e.  sans tenir compte de l'ordre), mais pour n'importe laquelle, e.g ♥️, ♣️, 🌞 on a
+  Si les dés ne sont pas ordonnés, on a bien 12 *combinaisons* (i.e.  sans tenir compte de l'ordre), mais pour n'importe laquelle, e.g ♥️, ♣️, 🌞 on a
 
   1. ♥️, ♣️, 🌞
   2. ♥️, 🌞, ♣️
@@ -141,7 +142,7 @@ On vise, plus abstraitement, à établir une méthode de sélection aléatoire.
   5. ♣️, ♥️, 🌞
   6. ♣️, 🌞, ♥️
 
-  ... 6 *permutations*  (i.e. en tenant compte de l'ordre) distinctes. Donc 12×6 = 72 permutations au total.
+  ... 6 *permutations* (i.e. en tenant compte de l'ordre) distinctes. Donc 12×6 = 72 permutations au total.
   Comme on utilise 3 dés distincts, avec 3 séries de symboles distinctes, les joueurs ne peuvent pas intuitivement ordonner les résultats. Ils doivent mémoriser l'ordre des symboles. ou bien se referer à la régle. Dans un cas comme dans l'autre, cela distrait de l'immersion dans le jeu.
   Une alternative supérieure ici pourrait être d'utiliser des cartes plutôt que des dés. Chaque carte, profitant d'une surface d'information plus large, indiquerait un résultat pour chaque série de symboles. Par exemple :
 
@@ -200,7 +201,8 @@ On vise, plus abstraitement, à établir une méthode de sélection aléatoire.
     3e tirage    ⭐
     ----------  ---
     : 3e carte
-  -->
+
+-->
 
   Après avoir tiré ces 3 cartes, on obtient la séquence ♥️, ♠️, ⭐.
   Ce système de carte permet aussi de tirer le jeu dans la direction de "tout avec des cartes" (et un jeu avec peu de types de composants parait sans doute souvent plus "simple", approchable).
@@ -208,6 +210,40 @@ On vise, plus abstraitement, à établir une méthode de sélection aléatoire.
   Il est à noter que ce systeme pourrait être compacté pour loger en marge des cartes courantes du jeu. Quelque chose comme ...
   
   ![exemple de carte](cartes/exemple-carte.png){style="width: 20rem;"}
+
+- Une solution légèrement différente serait d'utiliser des cartes dont chacune serait unique, e.g un jeu de 5 cartes [A, B, C, D, E] dont on tirerait 3. Cela donne 10 combinaisons, presque les 12 visées :
+
+  ---------  ---------  ---------
+   A, B, C    B, C, D    C, D, E
+   A, B, D    B, C, E
+   A, B, E    B, D, E
+   A, C, D
+   A, C, E
+   A, D, E
+  ---------  ---------  ---------
+
+  Mais chaque combinaison a 6 pérmutations, e.g. pour la combinaison "A, B, C" :
+  
+  ---------  ---------  ---------
+   A, B, C    B, A, C    C, A, B
+   A, C, B    B, C, A    C, B, A 
+  ---------  ---------  ---------
+
+  Cela donne un total de 10 × 6 = 60 pérmutations ... beaucoup trop.
+
+  Mais si on utilise un jeu de 4 cartes, e.g. [A, B, C, D], on a :
+
+  ---------  ---------
+   A, B, C    B, C, D
+   A, B, D 
+   A, C, D    
+  ---------  ---------
+
+  4 combinaisons dont chacune a toujours 6 pérmutations, pour un total de 4 × 6 = 24 pérmutations.
+  C'est toujours beaucoup trop, mais il est interessant que 24 = 12 × 2.
+  Il est donc possible de simplement donner une même interpretation (en termes d'effets dans le jeu) a 2 pérmutations.
+
+  
 
 - Une autre approche serait d'utiliser une jauge cyclique de 1 à 12 (un cadran d'horloge) avec un ou plusieurs *"exploding dice"* (dont les valeurs minimale et/ou maximale ne sont pas fixes, mais dont les extrêmes sont progressivement statistiquement de moins en moins probables). La propriété d'être "explosif" pourrait être couplée à celle de d'avoir des valeurs négatives et positives[^pink].
 

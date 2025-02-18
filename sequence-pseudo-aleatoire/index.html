@@ -302,7 +302,8 @@ indiquerait un résultat pour chaque série de symboles. Par exemple
     3e tirage    ⭐
     ----------  ---
     : 3e carte
-  -->
+
+-->
 <p>Après avoir tiré ces 3 cartes, on obtient la séquence ♥️, ♠️, ⭐. Ce
 système de carte permet aussi de tirer le jeu dans la direction de “tout
 avec des cartes” (et un jeu avec peu de types de composants parait sans
@@ -315,6 +316,82 @@ alt="exemple de carte" />
 <figcaption aria-hidden="true">exemple de carte</figcaption>
 </figure>
 <ul>
+<li><p>Une solution légèrement différente serait d’utiliser des cartes
+dont chacune serait unique, e.g un jeu de 5 cartes [A, B, C, D, E] dont
+on tirerait 3. Cela donne 10 combinaisons, presque les 12 visées :</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;">A, B, C</td>
+<td style="text-align: center;">B, C, D</td>
+<td style="text-align: center;">C, D, E</td>
+</tr>
+<tr>
+<td style="text-align: center;">A, B, D</td>
+<td style="text-align: center;">B, C, E</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">A, B, E</td>
+<td style="text-align: center;">B, D, E</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">A, C, D</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">A, C, E</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">A, D, E</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Mais chaque combinaison a 6 pérmutations, e.g. pour la combinaison
+“A, B, C” :</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;">A, B, C</td>
+<td style="text-align: center;">B, A, C</td>
+<td style="text-align: center;">C, A, B</td>
+</tr>
+<tr>
+<td style="text-align: center;">A, C, B</td>
+<td style="text-align: center;">B, C, A</td>
+<td style="text-align: center;">C, B, A</td>
+</tr>
+</tbody>
+</table>
+<p>Cela donne un total de 10 × 6 = 60 pérmutations … beaucoup trop.</p>
+<p>Mais si on utilise un jeu de 4 cartes, e.g. [A, B, C, D], on a :</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;">A, B, C</td>
+<td style="text-align: center;">B, C, D</td>
+</tr>
+<tr>
+<td style="text-align: center;">A, B, D</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">A, C, D</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>4 combinaisons dont chacune a toujours 6 pérmutations, pour un total
+de 4 × 6 = 24 pérmutations. C’est toujours beaucoup trop, mais il est
+interessant que 24 = 12 × 2. Il est donc possible de simplement donner
+une même interpretation (en termes d’effets dans le jeu) a 2
+pérmutations.</p></li>
 <li><p>Une autre approche serait d’utiliser une jauge cyclique de 1 à 12
 (un cadran d’horloge) avec un ou plusieurs <em>“exploding dice”</em>
 (dont les valeurs minimale et/ou maximale ne sont pas fixes, mais dont
