@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Tạ Minh Lâm" />
   <meta name="dcterms.date" content="2025-02-15" />
-  <meta name="dcterms.modified" content="2025-02-16" />
+  <meta name="dcterms.modified" content="2025-02-17" />
   <title>Reprise de notes en vrac sur une génération de séquence (pseudo-)aléatoire</title>
   <style>
     code{white-space: pre-wrap;}
@@ -39,15 +39,17 @@ séquence (pseudo-)aléatoire</h1>
 <ul>
   <li>par: <span class="author">Tạ Minh Lâm</span></li>
   <li>le: <time datetime="2025-02-15">2025-02-15</time></li>
-  <li>modifié le: <time datetime="2025-02-16">2025-02-16</time></li>
+  <li>modifié le: <time datetime="2025-02-17">2025-02-17</time></li>
 </ul>
 </aside>
 <p>Actuellement, on a une méthode pour produire une séquence</p>
+<blockquote>
 <ul>
-<li>de 2 nombres distincts l’un de l’autre (dans l’intervalle 1~3)</li>
+<li>de 2 nombres distincts l’un de l’autre dans l’intervalle 1~3</li>
 <li>chaque nombre d’une couleur (parmi deux)</li>
 <li>plus une couleur aléatoire (parmi les même deux)</li>
 </ul>
+</blockquote>
 <p>Les résultats élémentaires disponibles sont donc :</p>
 <table>
 <tbody>
@@ -86,8 +88,8 @@ Sous forme de table
 4. [2]{style="background: red;padding: .3em;"}, 
 5. [3]{style="background: green;padding: .3em;"}, 
 6. [3]{style="background: red;padding: .3em;"}, 
-7. [.]{style="background: green;padding: .3em;"}, 
-8. [—]{style="background: red;padding: .3em;"}, 
+7. [_]{style="background: green;padding: .3em;"}, 
+8. [_]{style="background: red;padding: .3em;"}, 
 
 -- --  --  -- --
 R  1R  2R  3R -R
@@ -100,22 +102,29 @@ V  1V  2V  3V -V
 <table>
 <tbody>
 <tr>
-<td style="text-align: left;">“1 rouge”, “3 vert”, “vert”</td>
+<td><span style="background: green;padding: .3em;">1</span>, <span
+style="background: green;padding: .3em;">3</span>, <span
+style="background: green;padding: .3em;">_</span></td>
 <td style="text-align: center;">OK</td>
 </tr>
 <tr>
-<td style="text-align: left;">“1 rouge”, “1 vert”, “vert”</td>
+<td><span style="background: red;padding: .3em;">1</span>, <span
+style="background: green;padding: .3em;">1</span>, <span
+style="background: green;padding: .3em;">_</span></td>
 <td style="text-align: center;">Non, car le “1” apparaît deux fois</td>
 </tr>
 </tbody>
 </table>
 <p>Matériellement, on à deux dés à 6 faces marqués …?, et d’un dé à six
 faces dont 3 sont rouges et 3 sont vertes.</p>
-<p>Je trouve un peu inélégant que les trois dés ne sont ni tous
-identiques, ni tous distincts.</p>
-<p>A noter que chaque séquence produite a la caractéristique utile
-d’avoir une couleur majoritaire, du fait de sa longueur impaire.</p>
-<p>On obtient un total de 12 séquences.</p>
+<p>Quelques remarques :</p>
+<ul>
+<li>Je trouve un peu inélégant que les trois dés ne sont ni tous
+identiques, ni tous distincts.</li>
+<li>A noter que chaque séquence produite a la caractéristique utile
+d’avoir une couleur majoritaire, du fait de sa longueur impaire.</li>
+<li>On obtient un total de 12 séquences.</li>
+</ul>
 <p>On vise, plus abstraitement, à établir une méthode de sélection
 aléatoire.</p>
 <ol type="1">
@@ -179,7 +188,7 @@ est alors trop loin des 12 séquences requises.</p></li>
 </ul>
 <!--
 
-  Mais si utilise 3 pieces distinctes, e.g. [🌞, 🌛], [A, B] et [1, 2], on a alors toujours 8 *combinaisons* (i.e.  sans tenir compte de l'ordre), 
+  Mais si utilise 3 pièces distinctes, e.g. [🌞, 🌛], [A, B] et [1, 2], on a alors toujours 8 *combinaisons* (i.e.  sans tenir compte de l'ordre), 
 
   ----------
    🌞, A, 1
@@ -192,7 +201,7 @@ est alors trop loin des 12 séquences requises.</p></li>
    🌛, B, 2
   ----------
 
-  ... mais pour chacune, par exemple 🌞, A, 1, on a 6 *pérmutations* (i.e. en tenant compte de l'ordre):
+  ... mais pour chacune, par exemple 🌞, A, 1, on a 6 *permutations* (i.e. en tenant compte de l'ordre):
 
   ----------
    🌞, A, 1
@@ -203,7 +212,7 @@ est alors trop loin des 12 séquences requises.</p></li>
    !, 🌞, A
   ----------
 
-  Donc un total de 8 × 6 = 48 pérmutations ... beaucoup trop par rapport aux 12 séquences requises.
+  Donc un total de 8 × 6 = 48 permutations ... beaucoup trop par rapport aux 12 séquences requises.
 -->
 <ul>
 <li><p>Une solution élégante serait d’utiliser trois “dés”
@@ -213,7 +222,7 @@ distincts:</p>
 <li>un marqué ♠️, ♠️, ♠️, ♣️, ♣️, ♣️</li>
 <li>un marqué 🌞, 🌞, 🌛,🌛, ⭐, ⭐</li>
 </ul>
-<p>(ces symboles en exemple n’ont pas d’intéret intrinséque. Ils
+<p>(ces symboles en exemple n’ont pas d’intérêt intrinsèque. Ils
 pourraient être remplacés par n’importe quoi de thématiquement
 approprié)</p>
 <p>On a bien [♥️,♦️] × [♣️,♠️] × [🌞,🌛,⭐], càd 2×2×3 = 12 séquences
@@ -221,8 +230,8 @@ distinctes. Cela satisfait <code>1.</code> et <code>2.</code>. Mais
 <code>3.</code> est discutable. Avec des dés, cela suppose soit de
 demander aux joueurs …</p>
 <ul>
-<li>d’aller pécher le bon dés parmis les trois avant le lancer, …</li>
-<li>soit de lancer n’importe lequel et de reordonner les résultats après
+<li>d’aller pécher le bon dés parmi les trois avant le lancer, …</li>
+<li>soit de lancer n’importe lequel et de réordonner les résultats après
 le 3e lancé.</li>
 </ul>
 <p>Si les dés ne sont pas ordonnés, on a bien 12 <em>combinaisons</em>
@@ -240,12 +249,13 @@ le 3e lancé.</li>
 distinctes. Donc 12×6 = 72 permutations au total. Comme on utilise 3 dés
 distincts, avec 3 séries de symboles distinctes, les joueurs ne peuvent
 pas intuitivement ordonner les résultats. Ils doivent mémoriser l’ordre
-des symboles. ou bien se referer à la régle. Dans un cas comme dans
-l’autre, cela distrait de l’immersion dans le jeu. Une alternative
-supérieure ici pourrait être d’utiliser des cartes plutôt que des dés.
-Chaque carte, profitant d’une surface d’information plus large,
-indiquerait un résultat pour chaque série de symboles. Par exemple
-:</p></li>
+des symboles. ou bien se référer à la règle. Dans un cas comme dans
+l’autre, cela distrait de l’immersion dans le jeu<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.
+Une alternative supérieure ici pourrait être d’utiliser des cartes
+plutôt que des dés. Chaque carte, profitant d’une surface d’information
+plus large, indiquerait un résultat pour chaque série de symboles. Par
+exemple :</p></li>
 </ul>
 <table>
 <tbody>
@@ -302,12 +312,13 @@ indiquerait un résultat pour chaque série de symboles. Par exemple
     3e tirage    ⭐
     ----------  ---
     : 3e carte
-  -->
+
+-->
 <p>Après avoir tiré ces 3 cartes, on obtient la séquence ♥️, ♠️, ⭐. Ce
 système de carte permet aussi de tirer le jeu dans la direction de “tout
 avec des cartes” (et un jeu avec peu de types de composants parait sans
 doute souvent plus “simple”, approchable).</p>
-<p>Il est à noter que ce systeme pourrait être compacté pour loger en
+<p>Il est à noter que ce système pourrait être compacté pour loger en
 marge des cartes courantes du jeu. Quelque chose comme …</p>
 <figure>
 <img src="cartes/exemple-carte.png" style="width: 20rem;"
@@ -315,14 +326,90 @@ alt="exemple de carte" />
 <figcaption aria-hidden="true">exemple de carte</figcaption>
 </figure>
 <ul>
+<li><p>Une solution légèrement différente serait d’utiliser des cartes
+dont chacune serait unique, e.g un jeu de 5 cartes [A, B, C, D, E] dont
+on tirerait 3. Cela donne 10 combinaisons, presque les 12 visées :</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;">A, B, C</td>
+<td style="text-align: center;">B, C, D</td>
+<td style="text-align: center;">C, D, E</td>
+</tr>
+<tr>
+<td style="text-align: center;">A, B, D</td>
+<td style="text-align: center;">B, C, E</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">A, B, E</td>
+<td style="text-align: center;">B, D, E</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">A, C, D</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">A, C, E</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">A, D, E</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Mais chaque combinaison a 6 permutations, e.g. pour la combinaison
+“A, B, C” :</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;">A, B, C</td>
+<td style="text-align: center;">B, A, C</td>
+<td style="text-align: center;">C, A, B</td>
+</tr>
+<tr>
+<td style="text-align: center;">A, C, B</td>
+<td style="text-align: center;">B, C, A</td>
+<td style="text-align: center;">C, B, A</td>
+</tr>
+</tbody>
+</table>
+<p>Cela donne un total de 10 × 6 = 60 permutations … beaucoup trop.</p>
+<p>Mais si on utilise un jeu de 4 cartes, e.g. [A, B, C, D], on a :</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;">A, B, C</td>
+<td style="text-align: center;">B, C, D</td>
+</tr>
+<tr>
+<td style="text-align: center;">A, B, D</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">A, C, D</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>4 combinaisons dont chacune a toujours 6 permutations, pour un total
+de 4 × 6 = 24 permutations. C’est toujours beaucoup trop, mais il est
+intéressant que 24 = 12 × 2. Il est donc possible de simplement donner
+une même interprétation (en termes d’effets dans le jeu) a 2
+permutations.</p></li>
 <li><p>Une autre approche serait d’utiliser une jauge cyclique de 1 à 12
 (un cadran d’horloge) avec un ou plusieurs <em>“exploding dice”</em>
 (dont les valeurs minimale et/ou maximale ne sont pas fixes, mais dont
 les extrêmes sont progressivement statistiquement de moins en moins
 probables). La propriété d’être “explosif” pourrait être couplée à celle
-de d’avoir des valeurs négatives et positives<a href="#fn1"
-class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>.</p>
+de d’avoir des valeurs négatives et positives<a href="#fn2"
+class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>.</p>
 <p>e.g. un dé à six faces marqué “-3”, “-2”, “-1”, “1”, “2”, “3”. Sur un
 résultat de “-3” ou “3”, le dé est lancé à nouveau, et le nouveau
 résultat est ajouté au précédent …</p>
@@ -342,10 +429,13 @@ alt="Si on depasse 12, on retombe à 1 …" />
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Plus abstraitement, on veut produire du “bruit rose”.
+<li id="fn1"><p>“esthétiquement” parlant, je trouve aussi inélégant
+d’utiliser un système qui offre une telle granularité pour<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Plus abstraitement, on veut produire du “bruit rose”.
 Voir à ce sujet le <a
 href="https://www.youtube.com/watch?v=qXn3tGBztVc">speech de Geoff
-Engelstein (~30min, YouTube)</a>.<a href="#fnref1" class="footnote-back"
+Engelstein (~30min, YouTube)</a>.<a href="#fnref2" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
