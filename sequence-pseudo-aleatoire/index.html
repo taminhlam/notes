@@ -176,6 +176,36 @@ il s’agit des valeurs binaires de 0 à 8 :</p>
 </table>
 <p>Cette méthode satisfait <code>2.</code> et <code>3.</code>, mais on
 est alors trop loin des 12 séquences requises.</p></li>
+</ul>
+<!--
+
+  Mais si utilise 3 pieces distinctes, e.g. [🌞, 🌛], [A, B] et [1, 2], on a alors toujours 8 *combinaisons* (i.e.  sans tenir compte de l'ordre), 
+
+  ----------
+   🌞, A, 1
+   🌞, A, 2
+   🌞, B, 1
+   🌞, B, 2
+   🌛, A, 1
+   🌛, A, 2
+   🌛, B, 1
+   🌛, B, 2
+  ----------
+
+  ... mais pour chacune, par exemple 🌞, A, 1, on a 6 *pérmutations* (i.e. en tenant compte de l'ordre):
+
+  ----------
+   🌞, A, 1
+   🌞, 1, A
+   A, 1, 🌞
+   A, 🌞, 1
+   1, A, 🌞
+   !, 🌞, A
+  ----------
+
+  Donc un total de 8 × 6 = 48 pérmutations ... beaucoup trop par rapport aux 12 séquences requises.
+-->
+<ul>
 <li><p>Une solution élégante serait d’utiliser trois “dés”
 distincts:</p>
 <ul>
@@ -195,10 +225,9 @@ demander aux joueurs …</p>
 <li>soit de lancer n’importe lequel et de reordonner les résultats après
 le 3e lancé.</li>
 </ul>
-<p>Si les dés ne sont pas ordonnés, on a bien 12
-<strong>combinaisons</strong> (i.e. selections <strong>sans tenir compte
-de l’ordre</strong>), mais pour n’importe laquelle, e.g ♥️, ♣️, 🌞 on
-a</p>
+<p>Si les dés ne sont pas ordonnés, on a bien 12 <em>combinaisons</em>
+(i.e. sans tenir compte de l’ordre), mais pour n’importe laquelle, e.g
+♥️, ♣️, 🌞 on a</p>
 <ol type="1">
 <li>♥️, ♣️, 🌞</li>
 <li>♥️, 🌞, ♣️</li>
@@ -207,16 +236,16 @@ a</p>
 <li>♣️, ♥️, 🌞</li>
 <li>♣️, 🌞, ♥️</li>
 </ol>
-<p>… 6 <strong>permutations</strong> distinctes (i.e. selections
-<strong>en tenant compte de l’ordre</strong>). Donc 12×6 = 72
-permutations au total. Comme on utilise 3 dés distincts, avec 3 séries
-de symboles distinctes, les joueurs ne peuvent pas intuitivement
-ordonner les résultats. Ils doivent mémoriser l’ordre des symboles. ou
-bien se referer à la régle. Dans un cas comme dans l’autre, cela
-distrait de l’immersion dans le jeu. Une alternative supérieure ici
-pourrait être d’utiliser des cartes plutôt que des dés. Chaque carte,
-profitant d’une surface d’information plus large, indiquerait un
-résultat pour chaque série de symboles. Par exemple :</p></li>
+<p>… 6 <em>permutations</em> (i.e. en tenant compte de l’ordre)
+distinctes. Donc 12×6 = 72 permutations au total. Comme on utilise 3 dés
+distincts, avec 3 séries de symboles distinctes, les joueurs ne peuvent
+pas intuitivement ordonner les résultats. Ils doivent mémoriser l’ordre
+des symboles. ou bien se referer à la régle. Dans un cas comme dans
+l’autre, cela distrait de l’immersion dans le jeu. Une alternative
+supérieure ici pourrait être d’utiliser des cartes plutôt que des dés.
+Chaque carte, profitant d’une surface d’information plus large,
+indiquerait un résultat pour chaque série de symboles. Par exemple
+:</p></li>
 </ul>
 <table>
 <tbody>

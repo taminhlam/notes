@@ -90,6 +90,35 @@ On vise, plus abstraitement, à établir une méthode de sélection aléatoire.
 
   Cette méthode satisfait `2.` et `3.`, mais on est alors trop loin des 12 séquences requises.
 
+<!--
+
+  Mais si utilise 3 pieces distinctes, e.g. [🌞, 🌛], [A, B] et [1, 2], on a alors toujours 8 *combinaisons* (i.e.  sans tenir compte de l'ordre), 
+
+  ----------
+   🌞, A, 1
+   🌞, A, 2
+   🌞, B, 1
+   🌞, B, 2
+   🌛, A, 1
+   🌛, A, 2
+   🌛, B, 1
+   🌛, B, 2
+  ----------
+
+  ... mais pour chacune, par exemple 🌞, A, 1, on a 6 *pérmutations* (i.e. en tenant compte de l'ordre):
+
+  ----------
+   🌞, A, 1
+   🌞, 1, A
+   A, 1, 🌞
+   A, 🌞, 1
+   1, A, 🌞
+   !, 🌞, A
+  ----------
+
+  Donc un total de 8 × 6 = 48 pérmutations ... beaucoup trop par rapport aux 12 séquences requises.
+-->
+
 - Une solution élégante serait d'utiliser trois "dés" distincts:
 
   - un marqué ♥️, ♥️, ♥️, ♦️, ♦️, ♦️
@@ -103,7 +132,7 @@ On vise, plus abstraitement, à établir une méthode de sélection aléatoire.
   - d'aller pécher le bon dés parmis les trois avant le lancer, ...
   - soit de lancer n'importe lequel et de reordonner les résultats après le 3e lancé.
 
-  Si les dés ne sont pas ordonnés, on a bien 12 **combinaisons** (i.e. selections **sans tenir compte de l'ordre**), mais pour n'importe laquelle, e.g ♥️, ♣️, 🌞 on a
+  Si les dés ne sont pas ordonnés, on a bien 12 *combinaisons*  (i.e.  sans tenir compte de l'ordre), mais pour n'importe laquelle, e.g ♥️, ♣️, 🌞 on a
 
   1. ♥️, ♣️, 🌞
   2. ♥️, 🌞, ♣️
@@ -112,7 +141,7 @@ On vise, plus abstraitement, à établir une méthode de sélection aléatoire.
   5. ♣️, ♥️, 🌞
   6. ♣️, 🌞, ♥️
 
-  ... 6 **permutations** distinctes (i.e. selections **en tenant compte de l'ordre**). Donc 12×6 = 72 permutations au total.
+  ... 6 *permutations*  (i.e. en tenant compte de l'ordre) distinctes. Donc 12×6 = 72 permutations au total.
   Comme on utilise 3 dés distincts, avec 3 séries de symboles distinctes, les joueurs ne peuvent pas intuitivement ordonner les résultats. Ils doivent mémoriser l'ordre des symboles. ou bien se referer à la régle. Dans un cas comme dans l'autre, cela distrait de l'immersion dans le jeu.
   Une alternative supérieure ici pourrait être d'utiliser des cartes plutôt que des dés. Chaque carte, profitant d'une surface d'information plus large, indiquerait un résultat pour chaque série de symboles. Par exemple :
 
