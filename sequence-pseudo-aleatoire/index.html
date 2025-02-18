@@ -42,6 +42,17 @@ séquence (pseudo-)aléatoire</h1>
   <li>modifié le: <time datetime="2025-02-17">2025-02-17</time></li>
 </ul>
 </aside>
+<style>
+h3:before {
+    display: block;
+    content: "";
+    border-top: .3rem solid black;
+    width: 100%;
+    margin: 0;
+    transform: translateY(-1rem);
+}
+</style>
+<h3 id="situation-de-départ">Situation de départ</h3>
 <p>Actuellement, on a une méthode pour produire une séquence</p>
 <blockquote>
 <ul>
@@ -128,17 +139,18 @@ d’avoir une couleur majoritaire, du fait de sa longueur impaire.</li>
 <p>On vise, plus abstraitement, à établir une méthode de sélection
 aléatoire.</p>
 <ol type="1">
-<li>dans une liste de ~12 éléments.</li>
-<li>Cette méthode devrait être à étapes (ces étapes servant de source de
-tension/ suspense)</li>
-<li>minimiser les ressources matérielles et cognitives requises par la
-procédure</li>
+<li><span id="c1">dans une liste de ~12 éléments.</span></li>
+<li><span id="c2">Cette méthode devrait être à étapes (ces étapes
+servant de source de tension/ suspense)</span></li>
+<li><span id="c3">minimiser les ressources matérielles et cognitives
+requises par la procédure</span></li>
 </ol>
-<ul>
-<li><p>Clairement, le plus simple pour <code>1.</code> et
-<code>3.</code> serait de lancer 1D12. Mais cela ne satisferait pas
-<code>2.</code>.</p></li>
-<li><p>Une méthode populaire pour le Yi King utilise 3 pièces de monnaie
+<h3 id="d12">1D12</h3>
+<p>Clairement, le plus simple pour <a href="#c1">1</a> et <a
+href="#c3">3</a> serait de lancer 1D12. Mais cela ne satisferait pas <a
+href="#c2">2</a>.</p>
+<h3 id="pieces">Pieces</h3>
+<p>Une méthode populaire pour le Yi King utilise 3 pièces de monnaie
 pour obtenir aléatoirement une combinaison parmi 8. Plus abstraitement,
 il s’agit des valeurs binaires de 0 à 8 :</p>
 <table>
@@ -183,9 +195,8 @@ il s’agit des valeurs binaires de 0 à 8 :</p>
 </tr>
 </tbody>
 </table>
-<p>Cette méthode satisfait <code>2.</code> et <code>3.</code>, mais on
-est alors trop loin des 12 séquences requises.</p></li>
-</ul>
+<p>Cette méthode satisfait <a href="#c2">2</a> et <a href="#c3">3</a>,
+mais on est alors trop loin des 12 séquences requises.</p>
 <!--
 
   Mais si utilise 3 pièces distinctes, e.g. [🌞, 🌛], [A, B] et [1, 2], on a alors toujours 8 *combinaisons* (i.e.  sans tenir compte de l'ordre), 
@@ -214,9 +225,8 @@ est alors trop loin des 12 séquences requises.</p></li>
 
   Donc un total de 8 × 6 = 48 permutations ... beaucoup trop par rapport aux 12 séquences requises.
 -->
-<ul>
-<li><p>Une solution élégante serait d’utiliser trois “dés”
-distincts:</p>
+<h3 id="dés-spéciaux">Dés spéciaux</h3>
+<p>Une solution élégante serait d’utiliser trois “dés” distincts:</p>
 <ul>
 <li>un marqué ♥️, ♥️, ♥️, ♦️, ♦️, ♦️</li>
 <li>un marqué ♠️, ♠️, ♠️, ♣️, ♣️, ♣️</li>
@@ -226,9 +236,9 @@ distincts:</p>
 pourraient être remplacés par n’importe quoi de thématiquement
 approprié)</p>
 <p>On a bien [♥️,♦️] × [♣️,♠️] × [🌞,🌛,⭐], càd 2×2×3 = 12 séquences
-distinctes. Cela satisfait <code>1.</code> et <code>2.</code>. Mais
-<code>3.</code> est discutable. Avec des dés, cela suppose soit de
-demander aux joueurs …</p>
+distinctes. Cela satisfait <a href="#c1">1</a> et <a href="#c2">2</a>.
+Mais <a href="#c3">3</a> est discutable. Avec des dés, cela suppose soit
+de demander aux joueurs …</p>
 <ul>
 <li>d’aller pécher le bon dés parmi les trois avant le lancer, …</li>
 <li>soit de lancer n’importe lequel et de réordonner les résultats après
@@ -246,17 +256,18 @@ le 3e lancé.</li>
 <li>♣️, 🌞, ♥️</li>
 </ol>
 <p>… 6 <em>permutations</em> (i.e. en tenant compte de l’ordre)
-distinctes. Donc 12×6 = 72 permutations au total. Comme on utilise 3 dés
-distincts, avec 3 séries de symboles distinctes, les joueurs ne peuvent
-pas intuitivement ordonner les résultats. Ils doivent mémoriser l’ordre
-des symboles. ou bien se référer à la règle. Dans un cas comme dans
-l’autre, cela distrait de l’immersion dans le jeu<a href="#fn1"
-class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.
-Une alternative supérieure ici pourrait être d’utiliser des cartes
+distinctes. Donc 12×6 = 72 permutations au total.</p>
+<p>Comme on utilise 3 dés distincts, avec 3 séries de symboles
+distinctes, les joueurs ne peuvent pas intuitivement ordonner les
+résultats. Ils doivent mémoriser l’ordre des symboles. ou bien se
+référer à la règle. Dans un cas comme dans l’autre, cela distrait de
+l’immersion dans le jeu<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>.</p>
+<h3 id="cartes">Cartes</h3>
+<p>Une alternative supérieure ici pourrait être d’utiliser des cartes
 plutôt que des dés. Chaque carte, profitant d’une surface d’information
 plus large, indiquerait un résultat pour chaque série de symboles. Par
-exemple :</p></li>
-</ul>
+exemple :</p>
 <table>
 <tbody>
 <tr>
@@ -325,10 +336,9 @@ marge des cartes courantes du jeu. Quelque chose comme …</p>
 alt="exemple de carte" />
 <figcaption aria-hidden="true">exemple de carte</figcaption>
 </figure>
-<ul>
-<li><p>Une solution légèrement différente serait d’utiliser des cartes
-dont chacune serait unique, e.g un jeu de 5 cartes [A, B, C, D, E] dont
-on tirerait 3. Cela donne 10 combinaisons, presque les 12 visées :</p>
+<p>Une approche légèrement différente serait d’utiliser des cartes dont
+chacune serait unique, e.g un jeu de 5 cartes [A, B, C, D, E] dont on
+tirerait 3. Cela donne 10 combinaisons, presque les 12 visées :</p>
 <table>
 <tbody>
 <tr>
@@ -401,11 +411,12 @@ on tirerait 3. Cela donne 10 combinaisons, presque les 12 visées :</p>
 de 4 × 6 = 24 permutations. C’est toujours beaucoup trop, mais il est
 intéressant que 24 = 12 × 2. Il est donc possible de simplement donner
 une même interprétation (en termes d’effets dans le jeu) a 2
-permutations.</p></li>
-<li><p>Une autre approche serait d’utiliser une jauge cyclique de 1 à 12
-(un cadran d’horloge) avec un ou plusieurs <em>“exploding dice”</em>
-(dont les valeurs minimale et/ou maximale ne sont pas fixes, mais dont
-les extrêmes sont progressivement statistiquement de moins en moins
+permutations.</p>
+<h3 id="jauge">Jauge</h3>
+<p>Une autre approche serait d’utiliser une jauge cyclique de 1 à 12 (un
+cadran d’horloge) avec un ou plusieurs <em>“exploding dice”</em> (dont
+les valeurs minimale et/ou maximale ne sont pas fixes, mais dont les
+extrêmes sont progressivement statistiquement de moins en moins
 probables). La propriété d’être “explosif” pourrait être couplée à celle
 de d’avoir des valeurs négatives et positives<a href="#fn2"
 class="footnote-ref" id="fnref2"
@@ -417,8 +428,7 @@ résultat est ajouté au précédent …</p>
 les joueurs, et associé à la valeur 1 et la couleur verte) a ainsi peu
 de chances d’évoluer beaucoup, mais a une chance non-nulle de bondir
 radicalement vers le pire (ici associé à la valeur 6 et la couleur
-rouge).</p></li>
-</ul>
+rouge).</p>
 <figure>
 <img src="jauge/wheel.alt2.png" style="width: 20rem;"
 alt="Si on depasse 12, on retombe à 1 …" />
