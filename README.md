@@ -1,2 +1,3 @@
 # notes
-notes
+
+notes, tests and experiments ….
