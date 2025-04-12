@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <%= directory %>
 </h1>
 <nav>
-<a class="button" href="/">Retour</a>
+<a class="button" href="/notes/galleries/">Retour</a>
 <button class="button" id="batchdownload">Télécharger la sélection</button>
 <button class="button" id="uncheckall">Tout désélectionner</button>
 </nav>
