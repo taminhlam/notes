@@ -13,7 +13,7 @@ page = ERB.new(<<TEMPLATE)
 <meta name="author" content="Ta Minh Lam">
 <meta name="robots" content="noindex">
 <meta name="googlebot" content="noindex">
-<link rel="stylesheet" href="/css/simple.min.css" type="text/css"/>
+<link rel="stylesheet" href="//notes/css/simple.min.css" type="text/css"/>
 <style>
 ul        { list-style-type: none;
             width:           100%; }
