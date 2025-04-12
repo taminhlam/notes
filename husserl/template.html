@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta HTTP-EQUIV="Pragma" content="no-cache">
+    <meta HTTP-EQUIV="Expires" content="-1">
+    <title>◊(select 'h1 doc)</title>
+    <!-- example of text-mode syntax 
+    <title>◊select['h1 doc], by MB</title>
+    <link rel="shortcut icon" href="../../app/img/display.ico">
+    -->
+    <link rel="stylesheet" type="text/css" href="css/tufte.css"/>
+    <link rel="Stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <style> [data-sr] {visibility: hidden;} </style>
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print"/>
+</head>
+
+<body>
+
+    <div id="container" class="exercise"> <!-- required by sidr -->
+        <div class="header">
+            <h1>◊(select 'h1 doc)</h1>
+        </div>
+    
+        <div class="md-area" id="primaryDisplay">
+            ◊(->html doc)
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/lazyload.min.js"></script>
+    <script>
+        LazyLoad.js(["js/jquery.min.js"], function() {
+            LazyLoad.js(["script.js"]);
+            var a = document.createElement('audio');
+        });
+    </script>
+
+</body>
+
+</html>

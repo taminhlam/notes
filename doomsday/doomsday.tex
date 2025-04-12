@@ -1,0 +1,293 @@
+\mainlanguage[en]
+% Enable hyperlinks
+\setupinteraction
+  [state=start,
+  title={Tomorrow is the day after Doomsday},
+  author={John Horton Conway},
+  style=,
+  color=,
+  contrastcolor=]
+
+\setuppagenumbering[location={footer,middle}]
+%~ \setupbackend[export=yes]
+\setupstructure[state=start,method=auto]
+
+\setupwhitespace[medium]
+
+
+
+\setuphead[chapter, section, subsection, subsubsection, subsubsubsection, subsubsubsubsection][number=no]
+
+
+
+% \setupexternalfigures[directory={images, /home/user/images}]
+%~ \setupexternalfigures[directory={[[foobar]]}]
+\setupexternalfigures[directory={doomsday}]
+
+
+\environment style
+\environment colorbrouwer
+
+
+\starttext
+\title[Tomorrow is the day after Doomsday]{Tomorrow is the day after Doomsday}
+
+\placeaside[right,high]{}{
+  \startaside[width=.3\textwidth]
+    \unhyphenated{
+      \startitemize[none, fit][stopper={}]
+        \item  John Horton Conway
+        \item October 1973
+      \stopitemize }
+  \stopaside }
+
+by {\bf J. H. Conway}\crlf
+from {\em Eureka. October 1973. p. ~28-32.}
+
+Lots of people have produced rules for working out the day of the week
+corresponding to any given date. One need merely add components for the
+century, year of century, month, and day of month, reduce modulo 7 and
+then start counting at the right place. But since the month components
+are essentially random numbers most people soon forget the rule. {[}In
+the version known as Zeller's congruence the month numbers are produced
+by a uniform formula, but this is just complicated enough to be easily
+forgotten.{]}
+
+The \underbar{Doomsday rule} is one I worked out last year in an attempt
+to overcome these difficulties. In it one computes Doomsday for the
+given year and then computes dates in that year relative to Doomsday.
+The rule has the additional advantage that when one knows Doomsday for
+the year one has in effect the complete calendar for that year at one's
+fingertips --- so all the man in the street need do is remember to
+update Doomsday at about the time he remembers to put the new year on
+his cheques.
+
+\subsection[title={Doomsdays in a given
+year},reference={doomsdays-in-a-given-year}]
+
+\startplacetable[location=none]
+\startxtable
+\startxtablehead[head]
+\startxrow
+\startxcell  \stopxcell
+\startxcell[align=left] DOOMSDAYS \stopxcell
+\stopxrow
+\stopxtablehead
+\startxtablebody[body]
+\startxrow
+\startxcell Jan \stopxcell
+\startxcell[align=left] 31/32 \stopxcell
+\stopxrow
+\startxrow
+\startxcell Feb \stopxcell
+\startxcell[align=left] 28/29 \stopxcell
+\stopxrow
+\startxrow
+\startxcell Mar \stopxcell
+\startxcell[align=left] 3 + 4 = 7 \stopxcell
+\stopxrow
+\startxrow
+\startxcell Apr \stopxcell
+\startxcell[align=left] 4 \stopxcell
+\stopxrow
+\startxrow
+\startxcell May \stopxcell
+\startxcell[align=left] 5 + 4 = 9 \stopxcell
+\stopxrow
+\startxrow
+\startxcell June \stopxcell
+\startxcell[align=left] 6 \stopxcell
+\stopxrow
+\startxrow
+\startxcell July \stopxcell
+\startxcell[align=left] 7 + 4 = 11 \stopxcell
+\stopxrow
+\startxrow
+\startxcell Aug \stopxcell
+\startxcell[align=left] 8 \stopxcell
+\stopxrow
+\startxrow
+\startxcell Sep \stopxcell
+\startxcell[align=left] 9 − 4 = 5 \stopxcell
+\stopxrow
+\startxrow
+\startxcell Oct \stopxcell
+\startxcell[align=left] 10 \stopxcell
+\stopxrow
+\startxrow
+\startxcell Nov \stopxcell
+\startxcell[align=left] 11 − 4 = 7 \stopxcell
+\stopxrow
+\stopxtablebody
+\startxtablefoot[foot]
+\startxrow
+\startxcell Dec \stopxcell
+\startxcell[align=left] 12 \stopxcell
+\stopxrow
+\stopxtablefoot
+\stopxtable
+\stopplacetable
+
+\underbar{Doomsday} for a given year is defined to be the day of the
+week on which the last day of February falls. For 1973,
+\underbar{Doomsday is Wednesday}: The displayed table shows how to find
+a Doomsday in any given month. In February we see that a Doomsday is Feb
+28 or 29 according as the year is ordinary or leap. In January, a
+Doomsday is Jan 31 or 32 in the same circumstances, ( Of course Jan 32 =
+Feb 1, but we should think of it as Jan 32. )
+
+Otherwise 2 Doomsday in the nth month is the nth day, if n is even, and
+the ( n ±4 )th day, if n is odd. The sign is + for long odd months ( 31
+days ), and − for short ones ( 30 days ), and it is fairly easy to
+remember than the only short odd months are September and November.
+
+Summary : \quote{Last} in Jan and Feb, otherwise nth in even months,
+( n ±4 )th in odd ones.
+
+By adding and subtracting 7s we can find other Doomsdays in these
+months, and then by the
+\quotation{last-friday-was-the-twentyfirst-so-today-is-the-twentyfifth}
+technique we can locate any particular date.
+
+\subsection[title={Examples},reference={examples}]
+
+\underbar{August 19 1973}? August is the 8th month, so that August 8th,
+and therefore August 22nd are Doomsdays ( Wednesdays in 1973 ), so
+August 19th is a Sunday.
+
+\underbar{September 24th}? September is the 9th month, and is short, so
+September 9 − 4 and September 26 are Doomsdays, so September 24th 1973
+is a Monday.
+
+II you do things exactly this way you will gradually remember more and
+more Doomsdays throughout the year. Don't say things like Sep 5 =
+Doomsday, 24 − 5 = 19 ≡ −2 ( mod 7 ), so Sep 24 = Doomsday − 2. This
+kind of calculation is prone to sign errors and does not help you to
+accumulate more mental Doomsdays.
+
+\subsection[title={Doomsdays for the century
+years.},reference={doomsdays-for-the-century-years.}]
+
+One first needs to know Doomsdays for the century years. All the
+practical man need know is that
+\underbar{Doomsday for 1900 was a Wednesday}. ( We say simply
+\quotation{1900 was a Wednesday}. ) However, we assert that in the
+Julian system ( which was used in England before September 1752 ) the
+years 0, 700, 1400, 2100, \ldots{} are \underbar{Sundays} ( they were
+more Godly then !), and that each century after one of these retards
+Doomsday by 1 day. In the Gregorian system ( after September 1752 ) 0,
+400, 800, 1200, 1600, \ldots{} are \underbar{Tuesdays}, and each century
+after the most recent of these retards Doomsday by 2 days. In
+particular, 1900 = 3 centuries past 1600 = Tuesday − 6 = Wednesday, as
+we asserted.
+
+\subsection[title={Doomsdays for years in a given
+century.},reference={doomsdays-for-years-in-a-given-century.}]
+
+Each ordinary year has its Doomsday 1 day later than the previous year,
+and each leap year 2 days later. It follows that within any given
+century a dozen years advances Doomsday by 12 + 3 = 15 days = 1 day.
+(\quotation{A dozen years is but a day.}) So we add to the Doomsday for
+the century year the number of dozens of years thereafter, the
+remainder, and the number of fours in the remainder. It is easiest to
+say these numbers aloud, as in the examples. Remember, 1900 = Wednesday.
+
+1946 ? We have 46 = 3 dozen and 10, so we say
+
+\startblockquote
+\quotation{1946 = Wednesday, 3 dozen, 10, and 2 = Thursday.}\crlf
+( Thursday being found by adding 3, 10, and 2 to Wednesday. )
+\stopblockquote
+
+1973 ? Wednesday, 6 dozen and 1 = Wednesday, as we know.\crlf
+1990 ? Wednesday, 8 dozen\footnote{? ! sic.}, 5, and 1 = Thursday.
+
+\underbar{1752 September 2 (Julian)?}
+
+1400 = Sunday, so 1700 = Sunday − 3 = Thursday, so\crlf
+1752 = Thursday, 4 dozen, 4, and 1 = Saturday, so\crlf
+September 5 would be Saturday, and September 2 = Wednesday.
+
+\underbar{1752 September 14 (Gregorian)?}
+
+1600 = Tuesday, so 1700 = Tuesday − 2 = Sunday, so\crlf
+1752 = Sunday, 4 dozen, 4, and 1 = Tuesday, so\crlf
+September 5 and 12 would be Tuesdays, so September 14 = Thursday.
+
+In fact in this country Wednesday September 2 and Thursday September 14
+1752 were consecutive days, since this was the year we changed from
+Julian to Gregorian.
+
+\subsection[title={\underbar{Note on changes in the calendar. }},reference={note-on-changes-in-the-calendar.}]
+
+The Julian system in which every fourth year has an extra day was
+introduced by Julius Caesar on the advice of the astronomer Sosigenes.
+For some time the calendar had been at the mercy of Roman officials who
+more or less arranged things to suit themselves, and there had, for
+instance, even been one year with a month of 45 days. Sosigenes
+recommended a regular alternation of 30 and 31 day months which would
+have been adhered to had not both Julius and Augustus Caesar needed the
+months named after them to have 31 days, which was achieved by breaking
+the regular alternation and shortening February still more.
+
+The Gregorian system, in which years divisible by 100 but not 400 are
+not leap years was introduced by Pope Gregory XII. Roman catholic
+countries changed in 1582, but protestant countries resisted this piece
+of popery for several hundred years, and then changed at various times.
+Some eastern European countries changed only this century, Sweden
+managed the change most elegantly, by simply omitting all leap years
+between 1800 and 1840 inclusive. So in working out dates for the
+intervening Period, one must be sure where one's problem originated.
+
+The reason for the change was of course that the astronomical year has
+365.2422 days rather than 365¼, and the inaccuracy had gradually
+accumulated until it was 10 or 11 days. There is still a residual
+inaccuracy which many people have remarked would be partly cured by
+making the years divisible by 4000 not leap years, but with any luck the
+whole ungainly system will be dead by then !)
+
+Another annoyance is that the conventional starting date for the year
+has not always been January 1 ( as we have supposed in the Doomsday
+rule ). A number of different dates have been used at various times,
+even in this country. Jan 1 and Dec 25 ( of what we should call the
+previous year ) were both used at about the end of the first millennium,
+but March 25 then became more or less universal. So for instance March
+24 1583 and March 25 1584 were consecutive days.
+
+This convention for starting the year is the \underbar{Old Style}, the
+January 1 convention being the \underbar{New Style}. Unfortunately these
+terms are often used incorrectly to refer to the Julian and Gregorian
+systems, since in fact the Act of Parliament establishing the Gregorian
+system in England also finally decreed that the New Style was henceforth
+to be used for all legal purposes.
+
+In fact the change from Old to New style dating had been accomplished
+long before. From about 1600 to 1700 opinion had gradually hardened in
+favour of the New Style. In the changeover period we usually find the
+double dating convention --- thus February 14 166 ⅚ denotes the date
+which would be Feb 14 1665 ( Old Style ), and Feb 14 1666 ( New Style ).
+The situation is further complicated by the fact that dates in history
+hooks have often been transposed into New Style even when they refer to
+periods when Old Style was the only one in use. Also, dates in English
+history books for the deaths of French kings ( say ) might be in either
+the Julian or Gregorian system for the period between 1582 and 1752,
+according as the original source was English or French.
+
+The fact that for various financial purposes the year starts on April 5
+is an interesting consequence of the various changes. Originally it
+started in the first day ( March 25 ) of the calendar year. When New
+Style was adopted, this remained the start of the financial year,
+although no longer the start of the calendar year. When we changed from
+Julian to Gregorian, this became April 5, since obviously no one was to
+pay a full year's interest on a year that was eleven days short !
+
+So apply the method for historical dates with some caution. But the rule
+really comes Into its own for dates within any given year. Throw your
+calendar away after a quick glance to find the Doomsday, for when you
+know Doomsday you will know it all ! But when you impress your friends
+with the Doomsday rule, remember to give credit where credit is due ! I
+do this now by noting that I found the Doomsday rule by simplifying
+( almost beyond recognition !) a rule given by Lewis Carrol in
+\underbar{Nature}, 1872.
+
+\stoptext

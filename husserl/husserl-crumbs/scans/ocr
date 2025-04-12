@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+pics=`ls *c*\.png | awk '{ print $0 }'`
+
+echo $pics
+
+for pic in $pics
+do
+  echo "$pic" 
+  tesseract "$pic" -l fra "${pic%.png}.txt"
+done

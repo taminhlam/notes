@@ -1,0 +1,261 @@
+system          > 
+system          > ConTeXt  ver: 2022.01.21 20:13 LMTX  fmt: 2022.2.23  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 1, order 1, name '/home/lam/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkiv
+close source    > level 1, order 1, name '/home/lam/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > jobfiles > using path: scripts
+system          > files > jobname 'doomsday/doomsday', input 'doomsday/doomsday.tex', result 'doomsday/doomsday'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 1, order 2, name 'doomsday/doomsday.tex'
+open source     > level 2, order 3, name 'scripts/style.tex'
+setup           > error in line 204, namespace 'head', instance 'section', key 'top,'
+modules         > 'ruby' is not found
+setup           > error in line 352, namespace 'itemgroup', instance 'itemize', key 'autointro,'
+setup           > error in line 352, namespace 'itemgroup', instance 'itemize', key 'packed,'
+setup           > error in line 352, namespace 'itemgroup', instance 'itemize', key 'joinedup,'
+setup           > error in line 352, namespace 'itemgroup', instance 'itemize', key 'nowhite,'
+system          > command '\ldots' is already defined
+close source    > level 2, order 3, name 'scripts/style.tex'
+open source     > level 2, order 4, name 'scripts/colorbrouwer.tex'
+close source    > level 2, order 4, name 'scripts/colorbrouwer.tex'
+structures      > bookmark: Tomorrow is the day a昀ter Doomsday
+structure       > sectioning > title @ level 2 : 0.0 -> Tomorrow is the day after Doomsday
+3:10:  [page boundary, callback triggered]
+3:10:  [page boundary, build triggered]
+3:10:  [page boundary, processed as penalty 0]
+floatblocks     > '1' placed (right)
+3:10:  [page boundary, callback triggered]
+3:10:  [page boundary, build triggered]
+3:10:  [page boundary, processed as penalty 0]
+3:15:  [page boundary, callback triggered]
+3:15:  [page boundary, build triggered]
+3:15:  [page boundary, processed as penalty 0]
+structures      > bookmark: Tomorrow is the day a昀ter Doomsday
+structure       > sectioning > section @ level 3 : 0.0.1 -> Tomorrow is the day after Doomsday
+system          > '1.1.1' arranged at '1'
+structures      > bookmark: Doomsdays in a given year
+structure       > sectioning > subsection @ level 4 : 0.0.1.1 -> Doomsdays in a given year
+Overfull \hbox (4.01074pt too wide) in paragraph at lines 72--79
+Overfull \hbox (13.03079pt too wide) in paragraph at lines 72--79
+Overfull \hbox (2.94034pt too wide) in paragraph at lines 72--79
+Overfull \hbox (15.0097pt too wide) in paragraph at lines 80--84
+Overfull \hbox (1.0079pt too wide) in paragraph at lines 80--84
+Overfull \hbox (1.78697pt too wide) in paragraph at lines 80--84
+columns         > float too wide for column
+floatblocks     > 1 saved
+Overfull \hbox (7.98856pt too wide) in paragraph at lines 149--153
+Overfull \hbox (16.58884pt too wide) in paragraph at lines 149--153
+structures      > bookmark: Examples
+structure       > sectioning > subsection @ level 4 : 0.0.1.2 -> Examples
+Overfull \hbox (0.56064pt too wide) in paragraph at lines 156--159
+Overfull \hbox (23.14023pt too wide) in paragraph at lines 156--159
+Overfull \hbox (6.95912pt too wide) in paragraph at lines 160--163
+Overfull \hbox (7.3729pt too wide) in paragraph at lines 160--163
+Overfull \hbox (12.19675pt too wide) in paragraph at lines 164--169
+Overfull \hbox (9.2034pt too wide) in paragraph at lines 164--169
+Overfull \hbox (7.30293pt too wide) in paragraph at lines 164--169
+Overfull \hbox (3.23618pt too wide) in paragraph at lines 164--169
+Overfull \hbox (10.66759pt too wide) in paragraph at lines 164--169
+structures      > bookmark: Doomsdays for the century years.
+structure       > sectioning > subsection @ level 4 : 0.0.1.3 -> Doomsdays for the century years.
+Overfull \hbox (1.9395pt too wide) in paragraph at lines 173--184
+Overfull \hbox (1.39969pt too wide) in paragraph at lines 173--184
+Overfull \hbox (4.57494pt too wide) in paragraph at lines 173--184
+Overfull \hbox (17.42337pt too wide) in paragraph at lines 173--184
+Overfull \hbox (1.87892pt too wide) in paragraph at lines 173--184
+Overfull \hbox (3.15622pt too wide) in paragraph at lines 173--184
+fonts           > checking > char ≡ (U+02261) in font 'SkolarSansLatn-Rg' with id 1: missing
+system          > '2.1.2' arranged at '2'
+backend         > xmp > using file '/home/lam/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+pages           > flushing realpage 2, userpage 2, subpage 2
+floatblocks     > 1 moved
+floatblocks     > '2' moved
+structures      > bookmark: Doomsdays for years in a given century.
+structure       > sectioning > subsection @ level 4 : 0.0.1.4 -> Doomsdays for years in a given century.
+Overfull \hbox (2.54056pt too wide) in paragraph at lines 188--195
+Overfull \hbox (1.70702pt too wide) in paragraph at lines 188--195
+Overfull \hbox (7.82365pt too wide) in paragraph at lines 188--195
+Overfull \hbox (3.58498pt too wide) in paragraph at lines 196--198
+Overfull \hbox (3.32712pt too wide) in paragraph at lines 199--202
+system          > '3.1.3' arranged at '1'
+Overfull \hbox (3.23117pt too wide) in paragraph at lines 215--218
+Overfull \hbox (1.49713pt too wide) in paragraph at lines 215--218
+Overfull \hbox (4.95923pt too wide) in paragraph at lines 215--218
+structures      > bookmark: Note on changes in the calendar.
+structure       > sectioning > subsection @ level 4 : 0.0.1.5 -> \underbar {Note on changes in the calendar. }
+Overfull \hbox (8.35336pt too wide) in paragraph at lines 221--230
+Overfull \hbox (4.49548pt too wide) in paragraph at lines 221--230
+Overfull \hbox (3.94379pt too wide) in paragraph at lines 221--230
+Overfull \hbox (5.9197pt too wide) in paragraph at lines 221--230
+Overfull \hbox (2.55655pt too wide) in paragraph at lines 221--230
+Overfull \hbox (12.19125pt too wide) in paragraph at lines 221--230
+Overfull \hbox (2.85638pt too wide) in paragraph at lines 221--230
+Overfull \hbox (1.716pt too wide) in paragraph at lines 221--230
+Overfull \hbox (0.25182pt too wide) in paragraph at lines 231--239
+Overfull \hbox (6.36945pt too wide) in paragraph at lines 231--239
+Overfull \hbox (25.5639pt too wide) in paragraph at lines 231--239
+Overfull \hbox (7.47435pt too wide) in paragraph at lines 231--239
+Overfull \hbox (1.63205pt too wide) in paragraph at lines 231--239
+Overfull \hbox (11.16182pt too wide) in paragraph at lines 240--246
+Overfull \hbox (13.08076pt too wide) in paragraph at lines 240--246
+Overfull \hbox (2.41713pt too wide) in paragraph at lines 240--246
+Overfull \hbox (0.4582pt too wide) in paragraph at lines 240--246
+system          > '4.1.4' arranged at '2'
+pages           > flushing realpage 4, userpage 4, subpage 4
+Overfull \hbox (4.2786pt too wide) in paragraph at lines 247--254
+Overfull \hbox (2.4566pt too wide) in paragraph at lines 247--254
+Overfull \hbox (8.90205pt too wide) in paragraph at lines 247--254
+Overfull \hbox (9.44276pt too wide) in paragraph at lines 247--254
+Overfull \hbox (3.16621pt too wide) in paragraph at lines 247--254
+Overfull \hbox (6.03864pt too wide) in paragraph at lines 247--254
+Overfull \hbox (8.95303pt too wide) in paragraph at lines 247--254
+Overfull \hbox (10.22284pt too wide) in paragraph at lines 255--261
+Overfull \hbox (4.40604pt too wide) in paragraph at lines 255--261
+Overfull \hbox (6.66928pt too wide) in paragraph at lines 255--261
+Overfull \hbox (4.02574pt too wide) in paragraph at lines 262--266
+Overfull \hbox (16.19655pt too wide) in paragraph at lines 262--266
+Overfull \hbox (0.77252pt too wide) in paragraph at lines 262--266
+Overfull \hbox (9.99246pt too wide) in paragraph at lines 267--275
+Overfull \hbox (5.62486pt too wide) in paragraph at lines 267--275
+Overfull \hbox (3.46605pt too wide) in paragraph at lines 267--275
+Overfull \hbox (5.0052pt too wide) in paragraph at lines 267--275
+Overfull \hbox (2.57153pt too wide) in paragraph at lines 267--275
+Overfull \hbox (9.5577pt too wide) in paragraph at lines 276--283
+Overfull \hbox (0.62212pt too wide) in paragraph at lines 276--283
+Overfull \hbox (9.41278pt too wide) in paragraph at lines 276--283
+Overfull \hbox (0.87148pt too wide) in paragraph at lines 276--283
+Overfull \hbox (11.86143pt too wide) in paragraph at lines 284--292
+Overfull \hbox (8.21344pt too wide) in paragraph at lines 284--292
+Overfull \hbox (7.02309pt too wide) in paragraph at lines 284--292
+Overfull \hbox (17.42387pt too wide) in paragraph at lines 284--292
+Overfull \hbox (11.42567pt too wide) in paragraph at lines 284--292
+system          > '5.1.5' arranged at '1'
+system          > '6.1.6' arranged at '2'
+pages           > flushing realpage 6, userpage 6, subpage 6
+close source    > level 1, order 4, name 'doomsday/doomsday.tex'
+(\end occurred inside a group at level 1)
+1:0: semi simple group entered at line 70: \begingroup
+0:0: bottom level
+system          > start used files
+system          > text: doomsday
+system          >   environment: style
+system          >   environment: colorbrouwer
+system          > stop used files
+system          > start used files
+system          >    1: filename=publ-imp-default.lua filetype=lua foundname=/home/lam/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/home/lam/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    2: filename=cont-new.mkxl filetype=tex foundname=/home/lam/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/home/lam/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
+system          >    3: filename=lang-exc.lua filetype=lua foundname=/home/lam/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/home/lam/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    4: filename=lang-us.lua filetype=lua foundname=/home/lam/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/home/lam/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    5: filename=doomsday/doomsday.tex format=tex foundname=doomsday/doomsday.tex fullname=/home/lam/Dropbox/projects/batcave/doomsday/doomsday.tex usedmethod=direct
+system          >    6: filename=scripts/style.tex format=tex foundname=scripts/style.tex fullname=/home/lam/Dropbox/projects/batcave/scripts/style.tex usedmethod=direct
+system          >    7: filename=lm.lfg filetype=tex foundname=/home/lam/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/home/lam/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
+system          >    8: filename=lm-math.lfg filetype=tex foundname=/home/lam/context/tex/texmf-context/tex/context/fonts/mkiv/lm-math.lfg fullname=/home/lam/context/tex/texmf-context/tex/context/fonts/mkiv/lm-math.lfg usedmethod=database
+system          >    9: filename=lm-math.map filetype=map format=map foundname=/home/lam/context/tex/texmf/fonts/map/dvips/lm/lm-math.map fullname=/home/lam/context/tex/texmf/fonts/map/dvips/lm/lm-math.map usedmethod=database
+system          >   10: filename=lm-rm.map filetype=map format=map foundname=/home/lam/context/tex/texmf/fonts/map/dvips/lm/lm-rm.map fullname=/home/lam/context/tex/texmf/fonts/map/dvips/lm/lm-rm.map usedmethod=database
+system          >   11: filename=SkolarSansLatn-Rg.otf filetype=otf format=otf foundname=/home/lam/.fonts/SkolarSansLatn-Rg.otf fullname=/home/lam/.fonts/SkolarSansLatn-Rg.otf usedmethod=filesystem
+system          >   12: filename=keep-latinmodern-math.otf filetype=otf format=otf foundname=/home/lam/context/tex/texmf-context/fonts/data/keep/keep-latinmodern-math.otf fullname=/home/lam/context/tex/texmf-context/fonts/data/keep/keep-latinmodern-math.otf usedmethod=database
+system          >   13: filename=scripts/colorbrouwer.tex format=tex foundname=scripts/colorbrouwer.tex fullname=/home/lam/Dropbox/projects/batcave/scripts/colorbrouwer.tex usedmethod=direct
+system          >   14: filename=grandeecp.otf filetype=otf format=otf foundname=/home/lam/.fonts/grandeecp.otf fullname=/home/lam/.fonts/grandeecp.otf usedmethod=filesystem
+system          >   15: filename=SkolarSansLatn-It.otf filetype=otf format=otf foundname=/home/lam/.fonts/SkolarSansLatn-It.otf fullname=/home/lam/.fonts/SkolarSansLatn-It.otf usedmethod=filesystem
+system          >   16: filename=lpdf-pdx.xml filetype=tex foundname=/home/lam/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/home/lam/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+system          > stop used files
+system          > start commandline options
+system          > currentrun="1"
+system          > fulljobname="doomsday/doomsday.tex"
+system          > input="doomsday/doomsday.tex"
+system          > kindofrun="1"
+system          > maxnofruns="9"
+system          > path="scripts"
+system          > purgeall="true"
+system          > texmfbinpath="/home/lam/context/tex/texmf-linux-64/bin"
+system          > stop commandline options
+system          > start commandline files
+system          >    1: doomsday/doomsday.tex
+system          > stop commandline files
+modules         > start used modules
+modules         > missing: *-ruby
+modules         > stop used modules
+fonts           > start missing characters: /home/lam/.fonts/SkolarSansLatn-Rg.otf
+fonts           >    3  U+02261  ≡  IDENTICAL TO
+fonts           > stop missing characters
+system          > 
+system          > status after finishing run
+system          > 
+system          >   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert
+system          >   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500
+system          >   min     150000   10000000     150000     150000    1000000    1000000    1000000      10000        500       1000      20000     100000        250        250         50         10
+system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250
+system          >   stp     100000    1000000     100000     100000     500000     250000    1000000      10000        250       1000      10000      10000        250        250         50         25
+system          > 
+system          >   mem     150000    1174947     150000               1000000    1000000    1000000      10000        500       1000      20000      10000    2452148         96       1200        320
+system          >   all    2400000    1174947    2400000               9000000    8000000    1000000     320000      16000      48000      80000     160000    2452148         96      28800      10240
+system          > 
+system          >   ini    2142543     858130          0      45373          0     496387                                                                                       0                      
+system          >   ptr      65959                 19112      65941                756582          0          0          0          0          0         86         10          0         28          7
+system          >   top      65960                740050     131074      78061     715559        422         38          8         12         39        417        250        250         50         10
+system          >   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          >   current input type    : initial
+system          > 
+system          >   approximate memory    : 29009703 (27 MB)
+system          > 
+system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 10
+system          > 
+system          >   luabytecode registers : 1002
+system          >   luabytecode bytes     : 16048 (0 MB)
+system          >   luastate bytes now    : 61937304 (59 MB)
+system          >   luastate bytes max    : 61937304 (59 MB)
+system          > 
+system          >   file callbacks        : 2905
+system          >   saved callbacks       : 3362
+system          >   direct callbacks      : 3
+system          >   function callbacks    : 10380
+system          >   value callbacks       : 6
+system          >   message callbacks     : 0
+system          >   bytecode callbacks    : 600
+system          > 
+system          >   mp instances          : 0
+system          >   mp estimated memory   : 0 (0 MB)
+system          >   mp file callbacks     : 0
+system          >   mp text callbacks     : 0
+system          >   mp script callbacks   : 0
+system          >   mp log callbacks      : 0
+system          > 
+system          >   total callbacks       : 17256
+system          >   mp total callbacks    : 0
+system          >   backend callbacks     : 0
+system          > 
+mkiv lua stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkiv lua stats  > used cache path: /home/lam/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkiv lua stats  > resource resolver: loadtime 0.005 seconds, 0 scans with scantime 0.000 seconds, 0 shared scans, 16 found files, scanned paths: <none>
+mkiv lua stats  > stored bytecode data: 502 modules (0.328 sec), 98 tables (0.016 sec), 600 chunks (0.344 sec)
+mkiv lua stats  > traced context: maxstack: 1618, freed: 2, unreachable: 1616
+mkiv lua stats  > cleaned up reserved nodes: 77 nodes, 10 lists of 435
+mkiv lua stats  > node memory usage: 54 attribute, 6 dir, 9 glue, 61 glue_spec, 3 kern, 3 penalty, 2 temp
+mkiv lua stats  > node list callback tasks: 12 unique task lists, 9 instances (re)created, 1533 calls
+mkiv lua stats  > h-node processing time: 0.044 seconds including kernel
+mkiv lua stats  > inserted spaces in output: 2830
+mkiv lua stats  > attribute processing time: 0.013 seconds front- and backend
+mkiv lua stats  > used backend: pdf
+mkiv lua stats  > jobdata time: 0.006 seconds saving, 0.000 seconds loading
+mkiv lua stats  > callbacks: file: 2905, saved: 3362, direct: 3, function: 10380, value: 6, message: 0, bytecode: 600, late 0, total: 17256 (0 per page)
+mkiv lua stats  > randomizer: initialized with value 0.62911793886311
+mkiv lua stats  > loaded tex modules: 1 requested, all missing (*-ruby)
+mkiv lua stats  > loaded patterns: en::1, load time: 0.000
+mkiv lua stats  > structure elements: 96 element chains identified
+mkiv lua stats  > interactive elements: 0 references, 8 destinations
+mkiv lua stats  > loaded fonts: 4 files: grandeecp.otf, skolarsanslatn-it.otf, skolarsanslatn-rg.otf, keep-latinmodern-math.otf
+mkiv lua stats  > font engine: otf 3.119, afm 1.513, tfm 1.000, 10 instances, 4 shared in backend, 0 common vectors, 4 common hashes, load time 0.152 seconds 
+mkiv lua stats  > font embedding time: 0.008 seconds, 2 fonts
+mkiv lua stats  > result saved in file: doomsday/doomsday.pdf, compresslevel 1, objectcompresslevel 3
+mkiv lua stats  > positions: 14 collected, 0 deltas, 10 shared partials, 6 partial entries
+mkiv lua stats  > used platform: linux-64, type: unix, binary subtree: texmf-linux-64
+mkiv lua stats  > used engine: luametatex version: 2.0936, functionality level: 20221202, format id: 616, compiler: gcc
+mkiv lua stats  > tex properties: 740050 hash slots used of 2097152, 65941 control sequences, approximate memory usage: 27 MB
+mkiv lua stats  > lua properties: engine: lua 5.4, used memory: 61 MB, ctx: 59 MB, max: 59 MB, symbol mask: utf (τεχ)
+mkiv lua stats  > runtime: 1.093 seconds, 6 processed pages, 6 shipped pages, 5.488 pages/second

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="fr-FR"
+      xml:lang="fr-FR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Ta Minh Lam">
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+<link rel="stylesheet" href="/simple.min.css" type="text/css"/>
+<style>
+ul        { list-style-type: none;
+            width:           100%; }
+li        { width:           100%; }
+.hidden   { display:         none; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var body = document.querySelector("body");
+
+  body.addEventListener("click", function(e) {
+    var target = e.target;
+
+    if (target.id == "batchdownload") {
+      var inputs = document.querySelectorAll("input:checked");
+      Array.from(inputs).map((i) => document.querySelector("#"+i.name).click());
+    };
+
+    if (target.id == "uncheckall") {
+      var inputs = document.querySelectorAll("input:checked");
+      Array.from(inputs).map((i) => i.checked = false);
+    };
+  });
+})
+</script>
+<title>autres</title>
+</head>
+<body>
+<h1>
+autres
+</h1>
+<nav>
+<a class="button" href="/">Retour</a>
+<button class="button" id="batchdownload">Télécharger la sélection</button>
+<button class="button" id="uncheckall">Tout désélectionner</button>
+</nav>
+<hr>
+<ul>
+
+
+    <li>
+      <figure>
+        <img src="787c0f22-dbc9-4dd7-8e76-977a7e01c7ba.png" loading="lazy">
+        <figcaption>
+          <input type="checkbox" id="check0" name="img0" />
+          787c0f22-dbc9-4dd7-8e76-977a7e01c7ba.png
+          <a class="hidden" id="img0" href="787c0f22-dbc9-4dd7-8e76-977a7e01c7ba.png" download="787c0f22-dbc9-4dd7-8e76-977a7e01c7ba.png">download</a>
+        </figcaption>
+      </figure>
+    </li>
+
+    <li>
+      <figure>
+        <img src="Deb-JJ-Lee-2001-regular.jpg" loading="lazy">
+        <figcaption>
+          <input type="checkbox" id="check1" name="img1" />
+          Deb-JJ-Lee-2001-regular.jpg
+          <a class="hidden" id="img1" href="Deb-JJ-Lee-2001-regular.jpg" download="Deb-JJ-Lee-2001-regular.jpg">download</a>
+        </figcaption>
+      </figure>
+    </li>
+
+    <li>
+      <figure>
+        <img src="a1a67c59ed94014d5e685a4280e406e5_original.gif" loading="lazy">
+        <figcaption>
+          <input type="checkbox" id="check2" name="img2" />
+          a1a67c59ed94014d5e685a4280e406e5_original.gif
+          <a class="hidden" id="img2" href="a1a67c59ed94014d5e685a4280e406e5_original.gif" download="a1a67c59ed94014d5e685a4280e406e5_original.gif">download</a>
+        </figcaption>
+      </figure>
+    </li>
+
+    <li>
+      <figure>
+        <img src="bafkreigqi4y334kxpkmrqrqaspapa7jrch6gj2dvlsf3wqymf7uupl5u74.jpg" loading="lazy">
+        <figcaption>
+          <input type="checkbox" id="check3" name="img3" />
+          bafkreigqi4y334kxpkmrqrqaspapa7jrch6gj2dvlsf3wqymf7uupl5u74.jpg
+          <a class="hidden" id="img3" href="bafkreigqi4y334kxpkmrqrqaspapa7jrch6gj2dvlsf3wqymf7uupl5u74.jpg" download="bafkreigqi4y334kxpkmrqrqaspapa7jrch6gj2dvlsf3wqymf7uupl5u74.jpg">download</a>
+        </figcaption>
+      </figure>
+    </li>
+
+    <li>
+      <figure>
+        <img src="birdy-ca-phe-den-lon-170ml-t30_ca14877c-0f13-4860-98b6-5456ee6b8d83-og.jpg" loading="lazy">
+        <figcaption>
+          <input type="checkbox" id="check4" name="img4" />
+          birdy-ca-phe-den-lon-170ml-t30_ca14877c-0f13-4860-98b6-5456ee6b8d83-og.jpg
+          <a class="hidden" id="img4" href="birdy-ca-phe-den-lon-170ml-t30_ca14877c-0f13-4860-98b6-5456ee6b8d83-og.jpg" download="birdy-ca-phe-den-lon-170ml-t30_ca14877c-0f13-4860-98b6-5456ee6b8d83-og.jpg">download</a>
+        </figcaption>
+      </figure>
+    </li>
+
+  </ul>
+  <footer>
+    <p>Crée avec <a href="https://simplecss.org/">Simple.css</a> (MIT license)
+    <br>
+    de <a href="https://kevquirk.com">Kev Quirk</a></p>
+  </footer>
+</body>
+</html>

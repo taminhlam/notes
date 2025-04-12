@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="fr-FR"
+      xml:lang="fr-FR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Ta Minh Lam">
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+<link rel="stylesheet" href="/simple.min.css" type="text/css"/>
+<style>
+ul        { list-style-type: none;
+            width:           100%; }
+li        { width:           100%; }
+.hidden   { display:         none; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var body = document.querySelector("body");
+
+  body.addEventListener("click", function(e) {
+    var target = e.target;
+
+    if (target.id == "batchdownload") {
+      var inputs = document.querySelectorAll("input:checked");
+      Array.from(inputs).map((i) => document.querySelector("#"+i.name).click());
+    };
+
+    if (target.id == "uncheckall") {
+      var inputs = document.querySelectorAll("input:checked");
+      Array.from(inputs).map((i) => i.checked = false);
+    };
+  });
+})
+</script>
+<title></title>
+</head>
+<body>
+<h1>
+
+</h1>
+<nav>
+<a class="button" href="/">Retour</a>
+<button class="button" id="batchdownload">Télécharger la sélection</button>
+<button class="button" id="uncheckall">Tout désélectionner</button>
+</nav>
+<hr>
+<ul>
+
+    <li>
+      <figure class="directory">
+        <a href="places">
+          places
+        </a>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="directory">
+        <a href="ukiyo-e">
+          ukiyo-e
+        </a>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="directory">
+        <a href="illusions">
+          illusions
+        </a>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="directory">
+        <a href="sato.jiro">
+          sato.jiro
+        </a>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="directory">
+        <a href="autres">
+          autres
+        </a>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="directory">
+        <a href="willy-wanggen">
+          willy-wanggen
+        </a>
+      </figure>
+    </li>
+
+
+  </ul>
+  <footer>
+    <p>Crée avec <a href="https://simplecss.org/">Simple.css</a> (MIT license)
+    <br>
+    de <a href="https://kevquirk.com">Kev Quirk</a></p>
+  </footer>
+</body>
+</html>

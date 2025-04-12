@@ -1,0 +1,573 @@
+\mainlanguage[fr]
+% Enable hyperlinks
+\setupinteraction
+  [state=start,
+  title={Féodédal},
+  author={Philippe Fassier},
+  keyword={jeux; labyrinthe; labyrôle; j&s},
+  style=,
+  color=,
+  contrastcolor=]
+
+\setuppagenumbering[location={footer,middle}]
+%~ \setupbackend[export=yes]
+\setupstructure[state=start,method=auto]
+
+\setupwhitespace[medium]
+
+
+
+\setuphead[chapter, section, subsection, subsubsection, subsubsubsection, subsubsubsubsection][number=no]
+
+
+
+% \setupexternalfigures[directory={images, /home/user/images}]
+\setupexternalfigures[directory={feodedal}]
+
+\environment style
+
+\starttext
+\title[Féodédal]{Féodédal}
+
+\placeaside[right,high]{}{
+  \startaside[width=.3\textwidth]
+    \unhyphenated{
+      \startitemize[none, fit][stopper={}]
+        \item  Philippe Fassier
+        \item août-septembre 1984
+        \item jeux & stratégie №28
+      \stopitemize }
+  \stopaside }
+\startabstract
+Le diabolique Philippe Fassier a encore frappé ! Vous vous retrouverez
+d'ici peu perdu dans le inquiétantes ruines des pages suivantes. En
+sortir ne sera pas si facile. Mais quant à y parvenir non seulement en
+bonne santé mais de plus riche \ldots{} ce sera une autre histoire !
+
+\stopabstract
+\blank[big]
+
+Vous voici à l'entrée d'un inquiétant château en ruines, détruit par
+quelque séisme ou colère divine. Votre intrusion risque de réveiller des
+légendes depuis longtemps oubliées\ldots{} Vous vous êtes aventuré dans
+l'enceinte sans précaution ni matériel (cordes, lampes\ldots{}) et le
+pont levis s'est effondré après votre passage. C'était le seul moyen
+d'accès.
+
+{\bf but du jeu:} ressortir du château sain et sauf et peut être chargé
+de trésors.
+
+{\bf déroulement de la partie:} vous débutez en 1. À chaque numéro
+rencontré lors de votre périple, vous vous reportez à la liste de
+description ci-dessous pour connaître l'événement correspondant (vous
+trouverez la signification des symboles utilisés dans le tableau).
+Lorsque, dans la liste des événements, vous rencontrez un nombre de 100
+à 200, vous vous reportez aux notes de résolution, page 110, pour
+connaître le résultat de votre action.
+
+Sauf indication contraire, vous ne pouvez pas franchir les zones noires
+ni sauter les murs.
+
+N'oubliez pas que votre but premier est de ressortir du château
+vivant\ldots{} et en bonne santé.
+
+\startitemize[packed]
+\item
+  Source: Scans de
+  \useURL[url1][https://abandonware-magazines.org]\from[url1]
+\item
+  Font:
+  \useURL[url2][https://speakthesky.itch.io/typeface-dicier][][Dicier,
+  by Speak the Sky]\from[url2], licensed under
+  \useURL[url3][https://creativecommons.org/licenses/by/4.0/][][CC BY
+  4.0]\from[url3]
+\stopitemize
+
+\page
+
+{\externalfigure[01.jpg][width=1.15\textwidth][centered]}
+
+{\externalfigure[02.jpg][width=1.15\textwidth][centered]}
+
+\page
+
+\subsubsection[title={Symboles utilisés},reference={symboles-utilisés}]
+
+\startplacetable[location=none]
+\startxtable
+\startxtablebody[body]
+\startxrow
+\startxcell[align=right] → n \stopxcell
+\startxcell[align=right] Se rendre à la note n. \stopxcell
+\startxcell[align=right] ← n \stopxcell
+\startxcell[align=right] Lire la note n. \stopxcell
+\stopxrow
+\startxrow
+\startxcell[align=right] si ← n \stopxcell
+\startxcell[align=right] Si vous avez lu la note n \ldots{} \stopxcell
+\startxcell[align=right] \dice{HEARTS} \stopxcell
+\startxcell[align=right] Vous trouvez \ldots{} \stopxcell
+\stopxrow
+\startxrow
+\startxcell[align=right] \dice{KNIVES} \stopxcell
+\startxcell[align=right] Vous êtes mort. \stopxcell
+\startxcell[align=right] \dice{0} \stopxcell
+\startxcell[align=right] Vous pouvez \ldots{} \stopxcell
+\stopxrow
+\startxrow
+\startxcell[align=right] \dice{ANY} \stopxcell
+\startxcell[align=right] Entrer. \stopxcell
+\startxcell[align=right] \dice{COIN} \stopxcell
+\startxcell[align=right] Posséder. \stopxcell
+\stopxrow
+\startxrow
+\startxcell[align=right] ↑ \stopxcell
+\startxcell[align=right] Se diriger vers\ldots{} \stopxcell
+\startxcell[align=right] R \stopxcell
+\startxcell[align=right] Revenir sur ses pas\ldots{} \stopxcell
+\stopxrow
+\startxrow
+\startxcell[align=right] \dice{CLUBS} \stopxcell
+\startxcell[align=right] C'est un cul de sac. \stopxcell
+\startxcell[align=right] X \stopxcell
+\startxcell[align=right] Impossible. \stopxcell
+\stopxrow
+\startxrow
+\startxcell[align=right] \dice{DIAMONDS} \stopxcell
+\startxcell[align=right] Passage souterrain. \stopxcell
+\startxcell[align=right] P \stopxcell
+\startxcell[align=right] Une pièce inoccupée. \stopxcell
+\stopxrow
+\stopxtablebody
+\startxtablefoot[foot]
+\startxrow
+\startxcell[align=right] \dice{CASTLES} \stopxcell
+\startxcell[align=right] Il ne se passe rien. \stopxcell
+\startxcell[align=right]  \stopxcell
+\startxcell[align=right]  \stopxcell
+\stopxrow
+\stopxtablefoot
+\stopxtable
+\stopplacetable
+
+\subsection[title={Descriptions},reference={descriptions}]
+
+\startitemize[n][stopper=.,width=2.0em]
+\item
+  Vous êtes \dice{ANY} dans les ruines, le pont-levis s'écroule, XR.
+\item
+  Un puit, la chaîne est assez longue pour ↑ 12.
+\item
+  P sombre → 100.
+\item
+  Si vous venez de 22 → 126; sinon → 194.
+\item
+  P, une porte sur le côté, si vous l'ouvrez → 164.
+\item
+  Vous tentez de ↑ 14 → 184; vers 11 → 200; sinon \dice{CASTLES}.
+\item
+  ← 147, X de bouger, ↑.
+\item
+  P, un passage ↑ 13.
+\item
+  \dice{HEARTS} un \dice{DIAMONDS}, si vous \dice{ANY} → 134.
+\item
+  X ↑ 5, mais \dice{0} ↑ 18.
+\item
+  Une faille a fait s'écrouler l'escalier, mais le passage est
+  possible;\crlf
+  si vous tentez de ↑ 6 → 200; si vous R → 118.
+\item
+  Une résurgence rejoint le torrent → 104.
+\item
+  L'escalier ↑ 14.
+\item
+  Si vous tentez de ↑ 6 → 113; sinon \dice{0} R.
+\item
+  P, → 101.
+\item
+  Un escalier très sombre \ldots{} → 176.
+\item
+  P, un socle vide → 127.
+\item
+  Un toboggan X à remonter, \dice{0} R ou descendre.
+\item
+  Le mur en ruine permet de ↑ 36, si vous tentez → 116;\crlf
+  sinon un escalier et un \dice{DIAMONDS} ↑ 23.
+\item
+  Rien de spécial.
+\item
+  Ce couloir ↑ 22.
+\item
+  Jolie vue sur la chute \ldots{}
+\item
+  X ↑ autre part que 19 ou 16.
+\item
+  Une porte X à ouvrir.
+\item
+  ← 120, si vous ↑ le bras de DRYH → 173;\crlf
+  si vous \dice{ANY} dans la bouche → 121.
+\item
+  \dice{HEARTS} l'aire d'un aigle → 107.
+\item
+  La carrière de rubis cubiques, X de détacher la moindre gemme !\crlf
+  → 106.
+\item
+  Un \dice{DIAMONDS}, si vous \dice{ANY} → 136.
+\item
+  ← 120; → 148.
+\item
+  \dice{HEARTS} un \dice{DIAMONDS}, si vous \dice{ANY} → 165.
+\item
+  Si vous avez l'œil de DRYH → 183; sinon → 153.
+\item
+  Les deux portes ne peuvent s'ouvrir que du côté apparent.
+\item
+  Si vous \dice{ANY} dans le \dice{DIAMONDS} → 154; sinon → 101.
+\item
+  Ce couloir ↑ 33.
+\item
+  Une eau noire vous sépare de 44; si vous R → 118;\crlf
+  si vous ↑ 44 en barque → 146.
+\item
+  \dice{HEARTS} l'aire d'un aigle - 117.
+\item
+  Si vous \dice{ANY} dans le \dice{DIAMONDS} → 182.
+\item
+  L'eau noire ne semble pas profonde pour ↑ 48; si vous traversez → 145.
+\item
+  Une porte ↑ 55; la porte se referme, XR.
+\item
+  → 102.
+\item
+  Vous avez la corde \ldots{} alors \dice{0} ↑ 40 ou 42.
+\item
+  → 102.
+\item
+  Si vous \dice{ANY} → 135.
+\item
+  X ↑ 35, l'eau est trop profonde.
+\item
+  La sortie d'un \dice{DIAMONDS} sous une cascade; le \dice{DIAMONDS} ↑
+  16.
+\item
+  Rien de spécial ici → 108.
+\item
+  → 137.
+\item
+  \dice{CASTLES}.
+\item
+  → 190.
+\item
+  Dans la grotte, deux yeux vous observent, vous R → 112;\crlf
+  vous ↑ les yeux → 195.
+\item
+  Un passage étroit ↑ 53.
+\item
+  Une tour avec un escalier.
+\item
+  Un navire échoué sur la falaise → 189.
+\item
+  Un arbre se retient pour ne pas tomber avec la falaise → 158.
+\item
+  Un libre → 159.
+\item
+  Si vous sautez pour vous ↑ 57 → 172; sinon \dice{CLUBS}.
+\item
+  P, \dice{CASTLES}; X ↑ 56; X ↑ 47.
+\item
+  Une porte fermée, si vous l'ouvrez → 163.
+\item
+  Un cabanon sur lequel est inscrit « CAISSE » → 167.
+\item
+  Un petit volcan en activité → 111.
+\item
+  Sur l'écriteau est inscrit « SORTIE » → 149.
+\item
+  L'entrée d'une église en ruines → 133.
+\item
+  P, → 171.
+\item
+  Un \dice{DIAMONDS} → 155.
+\item
+  Vous êtes dans la nef → 157.
+\item
+  Une fosse à serpents → 191.
+\item
+  Vous êtes dans la nef → 109.
+\item
+  Un \dice{DIAMONDS} ↑ 70.
+\item
+  Une machine, si vous utilisez la corde pour ↑ 71 → 185; sinon
+  \dice{CLUBS}.
+\item
+  ← 147; toutefois, un escalier et un \dice{DIAMONDS} ↑ 68.
+\item
+  Rien de spécial, X ↑ 69.
+\item
+  Si ← 124, \dice{0} passer, sinon \dice{CLUBS}, de; la lave est en
+  fusion.
+\item
+  X de descendre.
+\item
+  Si vous tentez de ↑ 73 → 186, sinon \dice{CLUBS}.
+\item
+  Des éboulis bouchent un \dice{DIAMONDS} \dice{CLUBS}.
+\item
+  La demeure d'un vieux sorcier; si vous \dice{ANY} → 188; sinon
+  \dice{CLUBS}.
+\stopitemize
+
+\page
+
+\subsection[title={page 110},reference={page-110}]
+
+\startitemize[n][start=100,stopper=.,width=2.5em]
+\item
+  Dans l'obscurité, deux portes;\crlf
+  si ↑ la droite → 151; si ↑ la gauche → 196.
+\item
+  \dice{CASTLES}.
+\item
+  Une corde peut vous mener à 41.
+\item
+  Le socle semble fait pour lui, vous le posez? oui → 169; non → 118.
+\item
+  La chaîne tombe avec fracas dans l'eau, XR.
+\item
+  L'estrade sur laquelle vous êtes, vous emmène en 20.
+\item
+  \dice{0} ↑ 20 ou 29 ou autre en R.
+\item
+  et l'aigle est là \ldots{} ← 141 il vous emmène en 46.
+\item
+  X d'ouvrir les deux portes \ldots{} → 4.
+\item
+  \dice{CASTLES} \dice{CLUBS}; il y a un vase avec deux ailes, rempli de
+  vif-argent, il est insoulevable, si vous R → 118, si vous videz le
+  vase → 180.
+\item
+  Mais l'araignée, elle, ne vous épargne pas ! \dice{KNIVES}.
+\item
+  ← 141; il redouble de colère et rend X le passage en 72 → 144.
+\item
+  → 118.
+\item
+  → 184.
+\item
+  Si vous mettez l'œil de DRYH dans le trou → 142; sinon → 101.
+\item
+  Il vous soulève ! Vous êtes à quatre mètres du sol; vous lâchez ?\crlf
+  oui → 174; non → 197.
+\item
+  Vous arrivez en haut de la tour sans dommage.
+\item
+  \dice{HEARTS} un œuf énorme, vous le prenez → 177; vous R → 112.
+\item
+  \dice{CASTLES}, \dice{0} R.
+\item
+  X de passer, \dice{0} que sauter dans le vide \dice{KNIVES}.
+\item
+  DRYH, père du royaume, pétrifié lors d'un combat de géants.
+\item
+  Un \dice{DIAMONDS} sombre et raide, vous tombez → 178.
+\item
+  Le \dice{DIAMONDS} ↑ 28.
+\item
+  Le \dice{DIAMONDS} ↑ 45.
+\item
+  Le volcan s'apaise, après un refroidissement, \dice{0} passer.
+\item
+  Si vous \dice{COIN} l'œuf d'aigle → 175; sinon 119.
+\item
+  Si vous ne \dice{COIN} pas l'œil de DRYH, X de passer entre les
+  statues → 187.
+\item
+  Si vous \dice{COIN} l'œuf d'aigle → 103; sinon \dice{CASTLES}
+  \dice{CLUBS}.
+\item
+  ← 141, ← 152, en échange il désire l'œuf d'aigle, si vous refusez
+  \dice{0} R, sinon → 168.
+\item
+  D'un geste, il vous tue \dice{KNIVES}.
+\item
+  X de prévoir, vous tombez dans le vide \dice{KNIVES}.
+\item
+  Si vous \dice{ANY} dans la nef → 166; sinon → 101.
+\item
+  Un aigle fond sur vous, il vous emmène en 46 avec l'œuf.
+\item
+  Si vous \dice{ANY} dans la nef → 101; sinon \dice{0} R.
+\item
+  Le \dice{DIAMONDS} ↑ 43.
+\item
+  Le \dice{DIAMONDS} ↑ 9.
+\item
+  Le \dice{DIAMONDS} ↑ la bouche en 25.
+\item
+  Vous êtes mouillé, vous glissez et tombez en 57;\crlf
+  si vous \dice{COIN} l'œuf, il se brise.
+\item
+  \dice{0} ↑ 11, mais attention au vertige.
+\item
+  Le vase s'envole vers le ciel à une vitesse vertigineuse,
+  \dice{CASTLES} \dice{0} R.
+\item
+  Une eau noire déferle sur vous, \dice{KNIVES}.
+\item
+  Apparemment vous le dérangez dans son travail \ldots{}.
+\item
+  X de le retirer ! Le sol tremble, \dice{HEARTS} un \dice{DIAMONDS} à
+  côté → 179.
+\item
+  Il vous expédie en 52.
+\item
+  Si vous ne \dice{COIN} pas l'œuf d'aigle, X de partir \dice{KNIVES};
+  sinon → 192.
+\item
+  \dice{CASTLES}, mais vous êtes trempé jusqu'aux cuisses !
+\item
+  \dice{CASTLES}, mais arrivé en 44, la barque ↑ 35, XR.
+\item
+  Comment diable êtes- vous arrivé-là ?!
+\item
+  \dice{HEARTS} une gemme de diamant dans l'œil du Père DRYH.
+\item
+  Si ← 145, une semaine après vous perdez l'usage de vos jambes;\crlf
+  si ← 192, vous devenez aveugle;\crlf
+  si ← 173, votre bras droit s'atrophie;\crlf
+  si ← 121, vous devenez muet;\crlf
+  si ← 176, vous devenez claustrophobe;\crlf
+  si ← 138, vous avez la phobie des hauteurs;\crlf
+  sinon, tout va bien!
+\item
+  \dice{CASTLES}, \dice{0} R, l'œuf est intact \ldots{}.
+\item
+  P, un trou dans le mur → 138.
+\item
+  Il vous demande : « Que voulez-vous? »
+\item
+  \dice{CASTLES}, \dice{0} ↑ 32 (haut).
+\item
+  Le \dice{DIAMONDS} ↑ 37.
+\item
+  Dans le noir, une grille se referme derrière vous, XR → 193.
+\item
+  L'escalier tremble mais \dice{0} passer.
+\item
+  \dice{CASTLES}, il n'y a rien, pourtant \dice{HEARTS} un coffret
+  rempli de joyaux!
+\item
+  \dice{0} ↑ 52, le \dice{DIAMONDS} est fermé, \dice{CLUBS}.
+\item
+  Tout ce que \dice{0} déchiffrer :
+
+  \startblockquote
+  « Celui qui désire la richesse embarquera; s'il convoite la gloire, il
+  attendra le neuvième mois et s'il veut la liberté, il volera les ailes
+  de mercure ».
+  \stopblockquote
+\item
+  \dice{HEARTS} un trou sur le front, si vous \dice{COIN} l'œil de DRYH
+  → 114, sinon → 101.
+\item
+  ← 141, ← 152, → 168.
+\item
+  Une fois, ça va, deux fois. l'escalier s'écroule \dice{KNIVES}.
+\item
+  Elle résiste, si vous insistez → 140.
+\item
+  P sombre, un rai de lumière passe sous une porte; vous R → 118; vous
+  \dice{ANY} → 130.
+\item
+  Un \dice{DIAMONDS} sombre et raide, vous ↑ un carrefour dans le
+  noir;\crlf
+  vous ↑ la droite → 122; vous ↑ la gauche → 136.
+\item
+  Il sombra, mais ne tombera point.
+\item
+  Si vous ne \dice{COIN} aucune gemme, le guide ouvre une trappe sur un
+  \dice{DIAMONDS} et vous y tombez → 193; sinon → 199.
+\item
+  Vous répondez :\crlf
+  « la richesse » → 143\crlf
+  « la gloire » → 181\crlf
+  « la liberté » → 170.
+\item
+  L'œuf se dématérialise! → 105.
+\item
+  Il éclate de rire puis → 198.
+\item
+  \dice{CASTLES}, rien que des graffitis cabalistiques \ldots{}
+  \dice{CLUBS}.
+\item
+  OK, \dice{CASTLES}, mais XR.
+\item
+  \dice{0} ↑ 32 (bas), \dice{CASTLES}.
+\item
+  Vous vous retrouvez en 70, il ↑ le ciel. si vous \dice{COIN} l'œuf, il
+  s'est écrasé.
+\item
+  Avec ça, vous survivrez une semaine, car → 119.
+\item
+  L'escalier ↑ un \dice{DIAMONDS}; après une très longue marche dans le
+  noir → 123.
+\item
+  OK; vous R en 19 ? oui → 150; vous attendez → 132.
+\item
+  Si vous \dice{COIN} l'œuf, il se brise; si vous \dice{COIN} l'œil de
+  DRYH, vous le perdez; → 122.
+\item
+  Il ↑ 54.
+\item
+  Vidé du lourd liquide, il semble attiré vers le ciel; vous lâchez →
+  139; vous ne lâchez pas → 115.
+\item
+  Il réfléchit et répond : « Vous la trouverez seul! » → 129.
+\item
+  Le \dice{DIAMONDS} ↑ 33.
+\item
+  La main de pierre s'abat sur vous, \dice{KNIVES}.
+\item
+  Les ruines s'écroulent, la toile d'araignée vous sauve de la chute
+  mortelle → 110.
+\item
+  La machine ne bronche pas, mais arrivé en 71, elle rembobine la corde,
+  XR.
+\item
+  Si vous \dice{COIN} l'œuf, il se brise; \dice{0} ↑ 73 mais XR.
+\item
+  \dice{0} ↑ 30 ou 22.
+\item
+  Si vous \dice{COIN} l'œuf d'aigle → 128; sinon → 161.
+\item
+  Le passage pour ↑ 51 s'écroule, XR → 131.
+\item
+  Une porte X à ouvrir, \dice{CLUBS}.
+\item
+  X R, \dice{KNIVES}.
+\item
+  En le jetant au feu, une vive explosion \ldots{} → 124.
+\item
+  Le \dice{DIAMONDS} ↑ 66.
+\item
+  Si vous \dice{COIN} l'œil de DRYH, \dice{0} passez entre les statues;
+  sinon → 125.
+\item
+  \dice{CASTLES}, c'est une statue, les yeux sont en diamant, X à
+  retirer → 160.
+\item
+  Un escalier dans le noir ↑ 5.
+\item
+  Trop tard, si vous lâchez, \dice{KNIVES};\crlf
+  sinon \dice{KNIVES} à partir de 10 000 mètres d'altitude ! \ldots{}
+\item
+  Il vous expédie en 7.
+\item
+  Vous lui donnez l'œil de DRYH, (ou autre si vous \dice{COIN}), puis
+  \dice{0} passer.
+\item
+  Si ← 156 → 162; sinon → 156.
+\stopitemize
+
+\stoptext
