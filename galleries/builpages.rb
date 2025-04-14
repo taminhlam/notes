@@ -76,13 +76,12 @@ document.addEventListener("DOMContentLoaded", function() {
 <% end %>
   </ul>
   <footer>
-    <p>
+    <p class="notice">
     MàJ :
     <%= d.year %>.<%= d.month %>.<%= d.day %>
     à
     <%= d.hour %>:<%= d.minute %>
     </p>
-    <hr>
     <p>Crée avec <a href="https://simplecss.org/">Simple.css</a> (MIT license)
     <br>
     de <a href="https://kevquirk.com">Kev Quirk</a></p>
