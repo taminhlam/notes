@@ -1,5 +1,6 @@
 require 'erb'
 require 'pathname'
+require 'date'
 
 page = ERB.new(<<TEMPLATE)
 <!DOCTYPE html>
@@ -75,6 +76,13 @@ document.addEventListener("DOMContentLoaded", function() {
 <% end %>
   </ul>
   <footer>
+    <p>
+    MàJ :
+    <%= d.year %>.<%= d.month %>.<%= d.day %>
+    à
+    <%= d.hour %>:<%= d.minute %>
+    </p>
+    <hr>
     <p>Crée avec <a href="https://simplecss.org/">Simple.css</a> (MIT license)
     <br>
     de <a href="https://kevquirk.com">Kev Quirk</a></p>
@@ -84,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
 TEMPLATE
 
 def buildpage(path, page)
+  d           = DateTime.now
   directory   = File.basename path
   directory   = "" if directory == "."
   images      = []
@@ -108,7 +117,7 @@ buildpage ".", page
 
 __END__
 images = `find .`.split("\n")
-               .select { |path| 
+               .select { |path|
                  ext = File.extname(path)
                  /webp|jpe*g|png/.match? ext.downcase
                }
