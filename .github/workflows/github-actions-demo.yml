@@ -15,4 +15,5 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - run: ruby ./galleries/buildpages.rb
       - run: echo "🍏 This job's status is ${{ job.status }}."
